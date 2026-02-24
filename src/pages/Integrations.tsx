@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { Search, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTA } from "@/components/sections/cta";
+import { useNavigate } from "react-router-dom";
 
 const categories = ["All", "Trading Platforms", "Payment Gateways", "KYC/AML", "Marketing", "VoIP"];
 
@@ -25,6 +26,33 @@ const integrations = [
 ];
 
 export default function Integrations() {
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (cat: string) => {
+    switch (cat) {
+      case "All":
+        navigate("/integrations");
+        break;
+      case "Trading Platforms":
+        navigate("/integrations/trading-platforms");
+        break;
+      case "Payment Gateways":
+        navigate("/integrations/payment-providers");
+        break;
+      case "KYC/AML":
+        navigate("/integrations/kyc-providers");
+        break;
+      case "VoIP":
+        navigate("/integrations/voip-providers");
+        break;
+      case "Marketing":
+        navigate("/features/loyalty-program");
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <div className="pt-20">
       {/* Header */}
@@ -63,6 +91,7 @@ export default function Integrations() {
             {categories.map((cat, i) => (
               <button 
                 key={i}
+                onClick={() => handleCategoryClick(cat)}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${i === 0 ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
               >
                 {cat}
@@ -97,7 +126,11 @@ export default function Integrations() {
             <div className="p-6 rounded-xl border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-center bg-slate-50">
               <h3 className="font-bold text-slate-900 mb-2">Missing something?</h3>
               <p className="text-sm text-slate-500 mb-4">We build custom integrations on request.</p>
-              <Button variant="link" className="text-brand-600 p-0 h-auto gap-1">
+              <Button
+                variant="link"
+                className="text-brand-600 p-0 h-auto gap-1"
+                onClick={() => navigate("/contact-us")}
+              >
                 Contact Developers <ArrowRight className="w-4 h-4" />
               </Button>
             </div>
@@ -130,7 +163,7 @@ export default function Integrations() {
                   <span className="text-slate-700 font-medium">99.99% Availability</span>
                 </li>
               </ul>
-              <Button>View API Docs</Button>
+              <Button onClick={() => navigate("/contact-us")}>View API Docs</Button>
             </div>
             <div className="bg-slate-900 rounded-2xl p-6 shadow-2xl overflow-hidden font-mono text-sm">
               <div className="flex items-center gap-2 mb-4 border-b border-slate-700 pb-4">

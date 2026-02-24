@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { RequestDemoContext } from "@/context/RequestDemoContext";
 
 export function Hero() {
+  const navigate = useNavigate();
+  const { setIsDemoDialogOpen } = useContext(RequestDemoContext)!;
+
   return (
     <section className="relative pt-16 pb-20 lg:pt-24 lg:pb-32 overflow-hidden bg-slate-50">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -27,10 +33,19 @@ export function Hero() {
               Streamline your brokerage operations with FinCRM. An all-in-one system featuring client area, partner area, and integrated mobile app for managing trading accounts.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
-              <Button size="lg" className="w-full sm:w-auto gap-2">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto gap-2"
+                onClick={() => navigate("/pricing")}
+              >
                 Start Free Trial <ArrowRight className="w-4 h-4" />
               </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto"
+                onClick={() => setIsDemoDialogOpen(true)}
+              >
                 View Live Demo
               </Button>
             </div>

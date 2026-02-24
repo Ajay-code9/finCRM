@@ -25,6 +25,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import * as Accordion from '@radix-ui/react-accordion';
 import React, { useContext } from 'react';
 import { RequestDemoContext } from '@/context/RequestDemoContext';
+import { MenuPromoCard } from "@/components/layout/menu-promo-card";
 
 const products = {
   forex: [
@@ -141,7 +142,11 @@ const DesktopMenu = ({ aname, items }: { aname: string, items: { [key: string]: 
       <div className="w-max max-w-[95vw] p-5 lg:p-6 flex flex-row gap-6 lg:gap-8">
         {Object.entries(items).map(([category, links]) => (
           <div key={category} className="w-full md:w-[240px] lg:w-[260px] shrink-0 space-y-4">
-            {category !== 'General' && <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">{category}</div>}
+            {category !== "General" && (
+              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">
+                {category}
+              </div>
+            )}
             {links.map((link) => (
               <DesktopLink
                 key={link.href}
@@ -153,6 +158,17 @@ const DesktopMenu = ({ aname, items }: { aname: string, items: { [key: string]: 
             ))}
           </div>
         ))}
+
+        {/* Right-side promo card shown in all desktop submenus */}
+        <div className="hidden md:block w-full md:w-[260px] lg:w-[280px] shrink-0">
+          <MenuPromoCard
+            imageSrc="/images/platform-overview.png"
+            title="Platform Overview"
+            description="Take a free tour of our platform features."
+            ctaText="Request a demo"
+            ctaLink="/features/crm"
+          />
+        </div>
       </div>
     </NavigationMenu.Content>
   </NavigationMenu.Item>

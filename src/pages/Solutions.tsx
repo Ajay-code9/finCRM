@@ -2,47 +2,56 @@ import { motion } from "motion/react";
 import { CheckCircle2, Server, Shield, Zap, Globe, Users, BarChart3, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTA } from "@/components/sections/cta";
+import { useNavigate } from "react-router-dom";
 
 const solutions = [
   {
     title: "Comprehensive CRM",
     description: "A specialized CRM designed for forex brokers. Offers tools for lead management, partner tracking, sales, and compliance to streamline operations.",
     icon: Users,
-    features: ["Lead Management", "Partner Tracking", "Sales Automation", "Compliance Tools"]
+    features: ["Lead Management", "Partner Tracking", "Sales Automation", "Compliance Tools"],
+    link: "/products/back-office"
   },
   {
     title: "Prop Trading Solution",
     description: "Specialized software for managing prop trading firms. Features real-time risk monitoring and challenge tracking.",
     icon: Shield,
-    features: ["Real-time Risk Monitoring", "Challenge Tracking", "Account Management", "Automated Rules"]
+    features: ["Real-time Risk Monitoring", "Challenge Tracking", "Account Management", "Automated Rules"],
+    link: "/products/prop-trading-crm"
   },
   {
     title: "Client Area",
     description: "An all-in-one self-service portal for your traders. Manage trading accounts, deposits, and KYC documents effortlessly.",
     icon: Globe,
-    features: ["Account Management", "Deposit & Withdrawal", "KYC Document Upload", "Multi-language Support"]
+    features: ["Account Management", "Deposit & Withdrawal", "KYC Document Upload", "Multi-language Support"],
+    link: "/products/client-area"
   },
   {
     title: "Partner Area",
     description: "Empower your IBs with a dedicated portal. Real-time tracking and seamless commission management to grow your network.",
     icon: BarChart3,
-    features: ["Real-time Tracking", "Commission Management", "Marketing Assets", "Multi-tier Rebates"]
+    features: ["Real-time Tracking", "Commission Management", "Marketing Assets", "Multi-tier Rebates"],
+    link: "/products/partner-area"
   },
   {
     title: "Integrated Mobile App",
     description: "Give your clients a seamless, intuitive mobile trading experience. Integrated mobile app for managing accounts on the go.",
     icon: Smartphone,
-    features: ["Branded UI", "Account Management", "Push Notifications", "Secure Login"]
+    features: ["Branded UI", "Account Management", "Push Notifications", "Secure Login"],
+    link: "/products/client-area"
   },
   {
     title: "Extensive Integrations",
     description: "Connects with MetaTrader 4/5, cTrader, over 290+ payment processors, and KYC providers for a unified ecosystem.",
     icon: Server,
-    features: ["MetaTrader 4/5", "cTrader", "290+ Payment Processors", "KYC Providers"]
+    features: ["MetaTrader 4/5", "cTrader", "290+ Payment Processors", "KYC Providers"],
+    link: "/integrations"
   }
 ];
 
 export default function Solutions() {
+  const navigate = useNavigate();
+
   return (
     <div className="pt-20">
       {/* Header */}
@@ -96,7 +105,12 @@ export default function Solutions() {
                     ))}
                   </ul>
                   <div className="mt-8">
-                    <Button variant="outline">Learn More</Button>
+                    <Button
+                      variant="outline"
+                      onClick={() => navigate(solution.link)}
+                    >
+                      Learn More
+                    </Button>
                   </div>
                 </div>
                 <div className="flex-1 w-full">

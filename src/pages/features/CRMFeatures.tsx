@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { 
   ArrowRight, 
@@ -29,6 +29,7 @@ import {
   PieChart 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestDemoContext } from "@/context/RequestDemoContext";
 
 // Define categories
 const categories = [
@@ -238,6 +239,7 @@ const features = [
 
 export default function CRMFeatures() {
   const [activeCategory, setActiveCategory] = useState("Modules");
+  const { setIsDemoDialogOpen } = useContext(RequestDemoContext)!;
 
   const filteredFeatures = features.filter(f => f.category === activeCategory);
 
@@ -259,7 +261,11 @@ export default function CRMFeatures() {
                 Welcome to the most feature-rich CRM ecosystem on the market. Modular, scalable, and designed for growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20 text-lg px-8 h-14 rounded-xl">
+                <Button
+                  size="lg"
+                  className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20 text-lg px-8 h-14 rounded-xl"
+                  onClick={() => setIsDemoDialogOpen(true)}
+                >
                   Request a Demo <ArrowRight className="w-5 h-5" />
                 </Button>
               </div>
@@ -414,7 +420,11 @@ export default function CRMFeatures() {
               </p>
             </div>
             <div className="relative z-10">
-              <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white text-xl px-10 py-8 h-auto rounded-2xl shadow-lg shadow-green-500/20 transition-transform hover:scale-105">
+              <Button
+                size="lg"
+                className="bg-green-500 hover:bg-green-600 text-white text-xl px-10 py-8 h-auto rounded-2xl shadow-lg shadow-green-500/20 transition-transform hover:scale-105"
+                onClick={() => setIsDemoDialogOpen(true)}
+              >
                 Request a demo
               </Button>
             </div>

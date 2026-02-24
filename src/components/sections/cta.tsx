@@ -1,7 +1,13 @@
 import { Button } from "@/components/ui/button";
+import { useContext } from "react";
+import { RequestDemoContext } from "@/context/RequestDemoContext";
+import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 
 export function CTA() {
+  const { setIsDemoDialogOpen } = useContext(RequestDemoContext)!;
+  const navigate = useNavigate();
+
   return (
     <section className="py-20 bg-brand-600 text-white text-center">
       <div className="container mx-auto px-4 md:px-6">
@@ -18,10 +24,20 @@ export function CTA() {
             Join hundreds of leading brokers who trust FinCRM to streamline their operations and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" variant="secondary" className="w-full sm:w-auto">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="w-full sm:w-auto bg-white text-brand-700 hover:bg-brand-50 hover:text-brand-800"
+              onClick={() => setIsDemoDialogOpen(true)}
+            >
               Request a Demo
             </Button>
-            <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white/20 text-white hover:bg-white/30">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="w-full sm:w-auto bg-white/20 text-white hover:bg-white/30"
+              onClick={() => navigate("/contact-us")}
+            >
               Contact Sales
             </Button>
           </div>

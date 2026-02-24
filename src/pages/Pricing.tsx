@@ -3,6 +3,7 @@ import { Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Clients } from "@/components/sections/clients";
 import { CustomPlan } from "@/components/sections/custom-plan";
+import { useNavigate } from "react-router-dom";
 
 const pricingData = {
   plans: [
@@ -58,6 +59,8 @@ const allFeatures = [
 ];
 
 export default function Pricing() {
+  const navigate = useNavigate();
+
   return (
     <div className="pt-20">
       {/* Header */}
@@ -122,7 +125,10 @@ export default function Pricing() {
               {pricingData.plans.map((plan, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl font-bold text-slate-900 mb-2">{plan.price}<span className="text-sm font-normal text-slate-500">/mo</span></div>
-                  <Button className="bg-green-500 hover:bg-green-600 text-white font-bold rounded-full px-10 py-3 text-base">
+                  <Button
+                    className="bg-green-500 hover:bg-green-600 text-white font-bold rounded-full px-10 py-3 text-base"
+                    onClick={() => navigate("/contact-us")}
+                  >
                     Talk to us
                   </Button>
                 </div>
