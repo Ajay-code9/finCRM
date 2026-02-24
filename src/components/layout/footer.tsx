@@ -1,0 +1,76 @@
+import { 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram 
+} from "lucide-react";
+import { Link } from "react-router-dom";
+
+export function Footer() {
+  return (
+    <footer className="bg-slate-900 text-slate-400 py-12 md:py-16">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
+          <div className="col-span-1 md:col-span-2">
+            <Link to="/" className="flex items-center gap-2 mb-4">
+              <div className="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl">
+                F
+              </div>
+              <span className="font-display font-bold text-xl tracking-tight text-white">
+                FinCRM
+              </span>
+            </Link>
+            <p className="text-sm leading-relaxed max-w-xs mb-6">
+              Specialized, fully customizable CRM and back-office solution for forex brokers and financial institutions.
+            </p>
+            <div className="flex items-center gap-4 justify-center md:justify-start">
+              <a href="#" className="hover:text-white transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-white mb-4">Product</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/solutions" className="hover:text-brand-400 transition-colors">CRM</Link></li>
+              <li><Link to="/solutions" className="hover:text-brand-400 transition-colors">IB Portal</Link></li>
+              <li><Link to="/solutions" className="hover:text-brand-400 transition-colors">Risk Management</Link></li>
+              <li><Link to="/solutions" className="hover:text-brand-400 transition-colors">Mobile App</Link></li>
+              <li><Link to="/integrations" className="hover:text-brand-400 transition-colors">Integrations</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-white mb-4">Company</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/company" className="hover:text-brand-400 transition-colors">About Us</Link></li>
+              <li><Link to="/company" className="hover:text-brand-400 transition-colors">Careers</Link></li>
+              <li><Link to="/company" className="hover:text-brand-400 transition-colors">Blog</Link></li>
+              <li><Link to="/company" className="hover:text-brand-400 transition-colors">Contact</Link></li>
+              <li><Link to="/company" className="hover:text-brand-400 transition-colors">Privacy Policy</Link></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-slate-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+          <p>&copy; {new Date().getFullYear()} FinCRM. All rights reserved.</p>
+          <div className="flex items-center gap-6">
+            <Link to="#" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link to="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="#" className="hover:text-white transition-colors">Cookie Policy</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
