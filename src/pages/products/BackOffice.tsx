@@ -61,7 +61,7 @@ export default function BackOffice() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
                 <img 
-                  src="https://picsum.photos/seed/backoffice/800/600" 
+                  src="/images/fincrmm5.jpg" 
                   alt="Back Office Dashboard" 
                   className="w-full h-auto"
                 />

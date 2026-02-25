@@ -7,7 +7,7 @@ export default function IsoCertification() {
       {/* Hero Section */}
       <section 
         className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white"
-        style={{ backgroundImage: "url('https://picsum.photos/seed/iso/1920/1080')" }}
+        style={{ backgroundImage: "url('/images/isocertification3.jpg')" }}
       >
         <div className="absolute inset-0 bg-slate-900/70"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -50,7 +50,7 @@ export default function IsoCertification() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <img src="https://picsum.photos/seed/security/600/400" alt="Security graphic" className="rounded-2xl shadow-xl" />
+              <img src="\images\isocertification2.jpg" alt="Security graphic" className="rounded-2xl shadow-xl" />
             </motion.div>
           </div>
         </div>

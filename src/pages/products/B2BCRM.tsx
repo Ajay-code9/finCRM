@@ -58,7 +58,7 @@ export default function B2BCRM() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
                 <img 
-                  src="https://picsum.photos/seed/b2bcrm/800/600" 
+                  src="\images\b2b1.jpg" 
                   alt="B2B CRM Dashboard" 
                   className="w-full h-auto"
                 />
@@ -200,7 +200,7 @@ export default function B2BCRM() {
                 className="order-2 lg:order-1"
               >
                 <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50 p-2">
-                  <img src="https://picsum.photos/seed/customer-service/800/500" alt="Customer Service" className="rounded-xl w-full h-auto" />
+                  <img src="\images\b2b2.jpg" alt="Customer Service" className="rounded-xl w-full h-auto" />
                 </div>
               </motion.div>
               <motion.div 
@@ -268,7 +268,7 @@ export default function B2BCRM() {
                 viewport={{ once: true }}
               >
                 <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50 p-2">
-                  <img src="https://picsum.photos/seed/efficiency/800/500" alt="Operational Efficiency" className="rounded-xl w-full h-auto" />
+                  <img src="\images\fincrmm5.jpg" alt="Operational Efficiency" className="rounded-xl w-full h-auto" />
                 </div>
               </motion.div>
             </div>

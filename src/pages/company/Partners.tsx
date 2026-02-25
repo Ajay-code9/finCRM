@@ -39,7 +39,7 @@ export default function Partners() {
               className="relative flex items-center justify-center"
             >
               <div className="absolute w-full h-full bg-purple-400 rounded-full blur-3xl opacity-20"></div>
-              <img src="https://picsum.photos/seed/partners/500/500" alt="Abstract partner graphic" className="relative w-full max-w-md" />
+              <img src="\images\partnerarea1.jpg" alt="Abstract partner graphic" className="relative w-full max-w-md" />
             </motion.div>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function Partners() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <img src="https://picsum.photos/seed/handshake/600/400" alt="Partnership graphic" className="rounded-2xl shadow-xl" />
+              <img src="\images\partnerarea2.jpg" alt="Partnership graphic" className="rounded-2xl shadow-xl" />
             </motion.div>
           </div>
         </div>

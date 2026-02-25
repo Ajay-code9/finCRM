@@ -55,7 +55,7 @@ export default function PartnerArea() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
                 <img 
-                  src="https://picsum.photos/seed/partner-area/800/600" 
+                  src="\images\partnerarea1.jpg" 
                   alt="Partner Area Dashboard" 
                   className="w-full h-auto"
                 />
@@ -104,7 +104,7 @@ export default function PartnerArea() {
               className="relative"
             >
               <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50 p-2">
-                <img src="https://picsum.photos/seed/ib-dashboard/800/600" alt="IB Dashboard" className="rounded-xl w-full h-auto" />
+                <img src="\images\partnerarea2.jpg" alt="IB Dashboard" className="rounded-xl w-full h-auto" />
               </div>
             </motion.div>
           </div>
@@ -261,7 +261,7 @@ export default function PartnerArea() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/30 to-transparent rounded-3xl transform rotate-3"></div>
               <img 
-                src="https://picsum.photos/seed/benefits/600/800" 
+                src="\images\partnerarea3.jpg" 
                 alt="Partner Benefits" 
                 className="relative rounded-3xl shadow-2xl border border-slate-700 w-full h-auto"
               />

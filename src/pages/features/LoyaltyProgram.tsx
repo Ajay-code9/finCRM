@@ -55,7 +55,7 @@ export default function LoyaltyProgram() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white p-2">
                 <img 
-                  src="https://picsum.photos/seed/loyalty/800/600" 
+                  src="\images\loyalityprogram.jpg" 
                   alt="Loyalty Program Dashboard" 
                   className="w-full h-auto rounded-xl"
                 />

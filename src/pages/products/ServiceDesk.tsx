@@ -57,7 +57,7 @@ export default function ServiceDesk() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
                 <img 
-                  src="https://picsum.photos/seed/servicedesk/800/600" 
+                  src="\images\servicedesk1.jpg" 
                   alt="Service Desk Dashboard" 
                   className="w-full h-auto"
                 />
@@ -158,7 +158,7 @@ export default function ServiceDesk() {
               className="relative"
             >
               <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white p-2">
-                <img src="https://picsum.photos/seed/tickets/800/600" alt="Ticket Management" className="rounded-xl w-full h-auto" />
+                <img src="\images\servicedesk2.jpg" alt="Ticket Management" className="rounded-xl w-full h-auto" />
               </div>
             </motion.div>
           </div>
@@ -171,7 +171,7 @@ export default function ServiceDesk() {
               className="order-2 lg:order-1 relative"
             >
               <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white p-2">
-                <img src="https://picsum.photos/seed/chat/800/600" alt="Integrated Communications" className="rounded-xl w-full h-auto" />
+                <img src="\images\servicedesk3.jpg" alt="Integrated Communications" className="rounded-xl w-full h-auto" />
               </div>
             </motion.div>
             <motion.div 

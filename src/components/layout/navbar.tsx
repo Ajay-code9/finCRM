@@ -162,7 +162,7 @@ const DesktopMenu = ({ aname, items }: { aname: string, items: { [key: string]: 
         {/* Right-side promo card shown in all desktop submenus */}
         <div className="hidden md:block w-full md:w-[260px] lg:w-[280px] shrink-0">
           <MenuPromoCard
-            imageSrc="/images/platform-overview.png"
+            imageSrc="\images\headerimage.jpg"
             title="Platform Overview"
             description="Take a free tour of our platform features."
             ctaText="Request a demo"

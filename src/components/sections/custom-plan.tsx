@@ -13,7 +13,7 @@ export function CustomPlan() {
             transition={{ duration: 0.5 }}
             className="w-full md:w-1/2"
           >
-            <img src="/assets/images/custom-plan.png" alt="Custom Plan" className="max-w-md mx-auto" />
+            <img src="\images\customplan.jpg" alt="Custom Plan" className="max-w-md mx-auto" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 20 }}

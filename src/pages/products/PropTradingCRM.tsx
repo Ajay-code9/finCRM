@@ -56,7 +56,7 @@ export default function PropTradingCRM() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
                 <img 
-                  src="https://picsum.photos/seed/proptrading/800/600" 
+                  src="\images\proptrading1.jpg" 
                   alt="Prop Trading Dashboard" 
                   className="w-full h-auto"
                 />
@@ -130,19 +130,19 @@ export default function PropTradingCRM() {
                 step: "1",
                 title: "Registration & Setup",
                 desc: "Traders sign up, choose a trading challenge, and participate in simulated or live environments. You set the benchmarks.",
-                img: "https://picsum.photos/seed/setup/400/300"
+                img: "/images/proptrading2.jpg"
               },
               {
                 step: "2",
                 title: "Skill Evaluation",
                 desc: "Participants must meet your firm's predefined requirements, such as profit targets or risk management criteria.",
-                img: "https://picsum.photos/seed/skill/400/300"
+                img: "/images/proptrading3.jpg"
               },
               {
                 step: "3",
                 title: "Funded Accounts",
                 desc: "Successful traders receive a funded account. They earn a share of profits, incentivizing performance while boosting your capital.",
-                img: "https://picsum.photos/seed/funded/400/300"
+                img: "/images/proptrading4.jpg"
               }
             ].map((item, i) => (
               <motion.div 
@@ -167,7 +167,7 @@ export default function PropTradingCRM() {
         </div>
       </section>
 
-      {/* Why Choose FXBO - Alternating Features */}
+      {/* Why Choose FinCRM - Alternating Features */}
       <section className="py-20 bg-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-20">
@@ -186,7 +186,7 @@ export default function PropTradingCRM() {
                 className="order-2 lg:order-1"
               >
                 <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50 p-2">
-                  <img src="https://picsum.photos/seed/dashboard1/800/500" alt="Centralized Management" className="rounded-xl w-full h-auto" />
+                  <img src="/images/proptrading5.jpg" alt="Centralized Management" className="rounded-xl w-full h-auto" />
                 </div>
               </motion.div>
               <motion.div 
@@ -254,7 +254,7 @@ export default function PropTradingCRM() {
                 viewport={{ once: true }}
               >
                 <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50 p-2">
-                  <img src="https://picsum.photos/seed/risk/800/500" alt="Risk Management" className="rounded-xl w-full h-auto" />
+                  <img src="/images/proptrading6.jpg" alt="Risk Management" className="rounded-xl w-full h-auto" />
                 </div>
               </motion.div>
             </div>
@@ -268,7 +268,7 @@ export default function PropTradingCRM() {
                 className="order-2 lg:order-1"
               >
                 <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50 p-2">
-                  <img src="https://picsum.photos/seed/integrations/800/500" alt="Seamless Integration" className="rounded-xl w-full h-auto" />
+                  <img src="/images/proptrading7.jpg" alt="Seamless Integration" className="rounded-xl w-full h-auto" />
                 </div>
               </motion.div>
               <motion.div 
@@ -432,7 +432,7 @@ export default function PropTradingCRM() {
                  alt="Coins"
                />
                <img 
-                 src="https://picsum.photos/seed/trophy/400/400" 
+                 src="/images/proptrading8.jpg" 
                  className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 object-contain opacity-50" 
                  alt="Trophy"
                />

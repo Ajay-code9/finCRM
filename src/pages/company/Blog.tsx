@@ -8,21 +8,21 @@ const blogPosts = [
     excerpt: "An in-depth look at the trends and innovations shaping the future of the brokerage industry.", 
     author: "John Doe", 
     date: "July 26, 2024",
-    image: "https://picsum.photos/seed/blog1/800/600"
+    image: "/images/blog1.jpg"
   },
   { 
     title: "5 Ways to Optimize Your Brokerage Operations", 
     excerpt: "Discover practical tips and strategies to enhance efficiency and drive growth in your brokerage.", 
     author: "Jane Smith", 
     date: "July 22, 2024",
-    image: "https://picsum.photos/seed/blog2/800/600"
+    image: "/images/blog2.jpg"
   },
   { 
     title: "Understanding the Importance of ISO 27001:2022", 
     excerpt: "Learn why ISO 27001:2022 certification is crucial for ensuring the security and integrity of your data.", 
     author: "Peter Jones", 
     date: "July 18, 2024",
-    image: "https://picsum.photos/seed/blog3/800/600"
+     image: "/images/blog3.jpg"
   },
 ];
 
@@ -32,7 +32,7 @@ export default function Blog() {
       {/* Hero Section */}
       <section 
         className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white"
-        style={{ backgroundImage: "url('https://picsum.photos/seed/blog/1920/1080')" }}
+       style={{ backgroundImage: "url('/images/blog.jpg')" }}
       >
         <div className="absolute inset-0 bg-slate-900/60"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">

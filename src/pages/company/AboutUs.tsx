@@ -12,7 +12,7 @@ const stats = [
 const testimonials = [
   {
     name: "M4Markets",
-    quote: "FXBO has been instrumental to our success as we’ve been growing with it since day 1. We love how easy it is to use and how it evolves with us as a growing broker. The CRM is easily customizable, and it is user friendly which me...",
+    quote: "FinCRM has been instrumental to our success as we’ve been growing with it since day 1. We love how easy it is to use and how it evolves with us as a growing broker. The CRM is easily customizable, and it is user friendly which me...",
     logo: "https://picsum.photos/seed/m4/40/40",
   },
   {
@@ -22,7 +22,7 @@ const testimonials = [
   },
   {
     name: "Kohle Capital",
-    quote: "FXBO is a great SAAS provider, we have been working with them for almost 2 years now. Their service is very stable and efficient, the customer support is top of the line. As a rapidly growing business, we are constantly looking fo...",
+    quote: "FinCRM is a great SAAS provider, we have been working with them for almost 2 years now. Their service is very stable and efficient, the customer support is top of the line. As a rapidly growing business, we are constantly looking fo...",
     logo: "https://picsum.photos/seed/kohle/40/40",
   },
 ];
@@ -47,8 +47,8 @@ export default function AboutUs() {
               </p>
               <div className="flex items-center gap-4">
                   <span className="text-sm font-semibold text-slate-500">Certified by:</span>
-                  <img src="https://picsum.photos/seed/tuv/80/40" alt="TUV Austria" className="h-8" />
-                  <img src="https://picsum.photos/seed/wallarm/80/40" alt="Wallarm" className="h-8" />
+                  <img src="\images\tuvaus" alt="TUV Austria" className="h-8" />
+                  <img src="\images\tuvnord" alt="Wallarm" className="h-8" />
               </div>
             </motion.div>
             <motion.div 
@@ -58,7 +58,7 @@ export default function AboutUs() {
               className="relative flex items-center justify-center"
             >
               <div className="absolute w-full h-full bg-purple-400 rounded-full blur-3xl opacity-20"></div>
-              <img src="https://picsum.photos/seed/abstract/500/500" alt="Abstract purple graphic" className="relative w-full max-w-md rounded-full" />
+              <img src="\images\aboutus.jpg" alt="Abstract purple graphic" className="relative w-full max-w-md rounded-full" />
             </motion.div>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function AboutUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <img src="https://picsum.photos/seed/dashboard/600/400" alt="Dashboard screenshot" className="rounded-2xl shadow-xl" />
+              <img src="\images\fincrm6.jpg" alt="Dashboard screenshot" className="rounded-2xl shadow-xl" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}

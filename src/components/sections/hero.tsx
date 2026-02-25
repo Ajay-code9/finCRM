@@ -79,7 +79,7 @@ export function Hero() {
               </div>
               <div className="pt-11">
                 <img
-                  src="https://picsum.photos/seed/dashboard/800/600"
+                  src="public\images\fincrm6.jpg"
                   alt="FinCRM Dashboard"
                   className="w-full h-auto object-cover"
                   loading="lazy"

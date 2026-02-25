@@ -55,7 +55,7 @@ export default function ClientArea() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
                 <img 
-                  src="https://picsum.photos/seed/clientarea/800/600" 
+                  src="\images\clientarea5.jpg" 
                   alt="Client Area Dashboard" 
                   className="w-full h-auto"
                 />
@@ -133,7 +133,7 @@ export default function ClientArea() {
                 className="order-2 lg:order-1"
               >
                 <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-white p-2">
-                  <img src="https://picsum.photos/seed/automation/800/500" alt="Automation" className="rounded-xl w-full h-auto" />
+                  <img src="\images\clientarea2.jpg" alt="Automation" className="rounded-xl w-full h-auto" />
                 </div>
               </motion.div>
               <motion.div 
@@ -193,7 +193,7 @@ export default function ClientArea() {
                 viewport={{ once: true }}
               >
                 <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-white p-2">
-                  <img src="https://picsum.photos/seed/onboarding/800/500" alt="Onboarding" className="rounded-xl w-full h-auto" />
+                  <img src="\images\clientarea2.jpg" alt="Onboarding" className="rounded-xl w-full h-auto" />
                 </div>
               </motion.div>
             </div>
@@ -207,7 +207,7 @@ export default function ClientArea() {
                 className="order-2 lg:order-1"
               >
                 <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-white p-2">
-                  <img src="https://picsum.photos/seed/funds/800/500" alt="Funds Management" className="rounded-xl w-full h-auto" />
+                  <img src="\images\clientarea3.jpg" alt="Funds Management" className="rounded-xl w-full h-auto" />
                 </div>
               </motion.div>
               <motion.div 
@@ -267,7 +267,7 @@ export default function ClientArea() {
                 viewport={{ once: true }}
               >
                 <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-white p-2">
-                  <img src="https://picsum.photos/seed/marketing/800/500" alt="Marketing Tools" className="rounded-xl w-full h-auto" />
+                  <img src="\images\clientarea4.jpg" alt="Marketing Tools" className="rounded-xl w-full h-auto" />
                 </div>
               </motion.div>
             </div>
