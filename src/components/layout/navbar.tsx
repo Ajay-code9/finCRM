@@ -45,12 +45,11 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group z-50 relative">
-          <div className="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl group-hover:bg-brand-700 transition-colors">
-            F
-          </div>
-          <span className="font-display font-bold text-xl tracking-tight text-slate-900">
-            FinCRM
-          </span>
+          <img
+            src="/logo/finCRM-logo-dark.svg"
+            alt="FinCRM"
+            className="h-8 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Nav */}

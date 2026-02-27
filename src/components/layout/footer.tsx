@@ -14,12 +14,11 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl">
-                F
-              </div>
-              <span className="font-display font-bold text-xl tracking-tight text-white">
-                FinCRM
-              </span>
+              <img
+                src="/logo/FinCRM-logo-white.svg"
+                alt="FinCRM"
+                className="h-8 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm leading-relaxed max-w-xs mb-6">
               Specialized, fully customizable CRM and back-office solution for forex brokers and financial institutions.
