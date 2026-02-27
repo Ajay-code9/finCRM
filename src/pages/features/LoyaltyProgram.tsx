@@ -15,12 +15,14 @@ import {
   Share2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRequestDemo } from "@/context/RequestDemoContext";
 
 export default function LoyaltyProgram() {
+  const { setIsDemoDialogOpen } = useRequestDemo();
   return (
     <div className="pt-8">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50 min-h-[calc(100vh-5rem)] flex items-center">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -42,7 +44,7 @@ export default function LoyaltyProgram() {
                 Empower your traders, incentivize success, and drive revenue with our cutting-edge rewards ecosystem. Turn trading activity into tangible value.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20">
+                <Button size="lg" className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20" onClick={() => setIsDemoDialogOpen(true)}>
                   Request a Demo <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
@@ -55,7 +57,7 @@ export default function LoyaltyProgram() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white p-2">
                 <img 
-                  src="\images\loyalityprogram.jpg" 
+                  src="/images/loyalityprogram.jpg" 
                   alt="Loyalty Program Dashboard" 
                   className="w-full h-auto rounded-xl"
                 />
@@ -271,7 +273,7 @@ export default function LoyaltyProgram() {
               <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-8">
                 Ready to revolutionize your retention strategy?
               </h2>
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20" onClick={() => setIsDemoDialogOpen(true)}>
                 Request a Demo
               </Button>
             </div>

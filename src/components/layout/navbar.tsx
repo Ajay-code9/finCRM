@@ -1,71 +1,27 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  LayoutDashboard, 
-  Trophy, 
-  Users, 
-  Handshake, 
-  Briefcase, 
-  Headphones, 
-  Settings,
-  BarChart2,
-  Wallet,
-  Phone,
-  ShieldCheck,
-  CheckCircle,
-  FileText
-} from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import * as Accordion from '@radix-ui/react-accordion';
-import React, { useContext } from 'react';
-import { RequestDemoContext } from '@/context/RequestDemoContext';
+import * as Accordion from "@radix-ui/react-accordion";
+import React from "react";
+import { useRequestDemo } from "@/context/RequestDemoContext";
 import { MenuPromoCard } from "@/components/layout/menu-promo-card";
-
-const products = {
-  forex: [
-    { name: "Back Office", href: "/products/back-office", icon: LayoutDashboard, description: "Automate operations and manage client data." },
-    { name: "Prop Trading CRM", href: "/products/prop-trading-crm", icon: Trophy, description: "Launch your prop trading firm with ease." },
-    { name: "Client Area", href: "/products/client-area", icon: Users, description: "Unmatched UI experience and technology." },
-    { name: "Partner Area", href: "/products/partner-area", icon: Handshake, description: "Empower your IBs with real-time tracking." },
-  ],
-  b2b: [
-    { name: "B2B CRM", href: "/products/b2b-crm", icon: Briefcase, description: "Streamline your company with automated workflows." },
-    { name: "Service Desk", href: "/products/service-desk", icon: Headphones, description: "Support your customers with powerful tools." },
-  ]
-};
-
-const features = [
-  { name: "CRM Features", href: "/features/crm", icon: Settings, description: "Elevate your brokerage with modular tools." },
-  { name: "Tiered Loyalty Program", href: "/features/loyalty-program", icon: Users, description: "Boost client retention with our rewards system." },
-];
-
-const integrations = [
-  { name: "Trading platforms", href: "/integrations/trading-platforms", icon: BarChart2, description: "Integrate with top-tier trading platforms." },
-  { name: "Payment providers", href: "/integrations/payment-providers", icon: Wallet, description: "Access over 340+ top-tier PSPs worldwide." },
-  { name: "VOIP providers", href: "/integrations/voip-providers", icon: Phone, description: "Seamlessly integrate with leading VOIP services." },
-  { name: "KYC providers", href: "/integrations/kyc-providers", icon: ShieldCheck, description: "Streamline onboarding and ensure compliance." },
-];
-
-const company = [
-  { name: "About us", href: "/company/about-us", icon: LayoutDashboard, description: "Top-notch solutions to optimize your brokerage." },
-  { name: "Partners", href: "/company/partners", icon: Handshake, description: "Teaming up with top-tier unicorns." },
-  { name: "Help center", href: "/company/help-center", icon: Headphones, description: "Find answers in our detailed FAQs." },
-  { name: "ISO Certification", href: "/company/iso-certification", icon: CheckCircle, description: "Committed to security with ISO 27001:2022." },
-  { name: "Careers", href: "/company/careers", icon: Trophy, description: "Join our dynamic and innovative team." },
-  { name: "Blog", href: "/company/blog", icon: FileText, description: "Expert insights and product updates." },
-];
+import {
+  companyNav,
+  featuresNav,
+  integrationsNav,
+  productsNav,
+  type NavItem,
+} from "@/data/nav";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { setIsDemoDialogOpen } = useContext(RequestDemoContext)!;
+  const { setIsDemoDialogOpen } = useRequestDemo();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -101,10 +57,10 @@ export function Navbar() {
         <div className="hidden lg:flex items-center justify-center flex-1 px-8">
           <NavigationMenu.Root className="relative z-50 flex justify-center" delayDuration={0}>
             <NavigationMenu.List className="flex items-center gap-4 lg:gap-6 list-none m-0 p-0">
-              <DesktopMenu aname="Products" items={{ Forex: products.forex, B2B: products.b2b }} />
-              <DesktopMenu aname="Features" items={{ General: features }} />
-              <DesktopMenu aname="Integration" items={{ General: integrations }} />
-              <DesktopMenu aname="Company" items={{ General: company }} />
+              <DesktopMenu aname="Products" items={{ Forex: productsNav.forex, B2B: productsNav.b2b }} />
+              <DesktopMenu aname="Features" items={{ General: featuresNav }} />
+              <DesktopMenu aname="Integration" items={{ General: integrationsNav }} />
+              <DesktopMenu aname="Company" items={{ General: companyNav }} />
               <NavLink href="/pricing" name="Pricing" />
               <NavLink href="/contact-us" name="Contact us" />
             </NavigationMenu.List>
@@ -133,7 +89,16 @@ export function Navbar() {
   );
 }
 
-const DesktopMenu = ({ aname, items }: { aname: string, items: { [key: string]: { href: string; icon: React.ElementType; name: string; description: string; }[] } }) => (
+interface DesktopMenuItems {
+  [key: string]: NavItem[];
+}
+
+interface DesktopMenuProps {
+  aname: string;
+  items: DesktopMenuItems;
+}
+
+const DesktopMenu: React.FC<DesktopMenuProps> = ({ aname, items }) => (
   <NavigationMenu.Item>
     <NavigationMenu.Trigger className="group flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors outline-none select-none data-[state=open]:text-brand-600">
       {aname}
@@ -162,11 +127,12 @@ const DesktopMenu = ({ aname, items }: { aname: string, items: { [key: string]: 
         {/* Right-side promo card shown in all desktop submenus */}
         <div className="hidden md:block w-full md:w-[260px] lg:w-[280px] shrink-0">
           <MenuPromoCard
-            imageSrc="\images\headerimage.jpg"
+            imageSrc="/images/headerimage.jpg"
             title="Platform Overview"
             description="Take a free tour of our platform features."
             ctaText="Request a demo"
             ctaLink="/features/crm"
+            onCtaClick={() => setIsDemoDialogOpen(true)}
           />
         </div>
       </div>
@@ -193,7 +159,12 @@ const DesktopLink: React.FC<DesktopLinkProps> = ({ href, icon: Icon, name, descr
   </Link>
 );
 
-const NavLink = ({ href, name }) => {
+interface NavLinkProps {
+  href: string;
+  name: string;
+}
+
+const NavLink: React.FC<NavLinkProps> = ({ href, name }) => {
   const location = useLocation();
   return (
     <NavigationMenu.Item>
@@ -210,13 +181,19 @@ const NavLink = ({ href, name }) => {
   );
 };
 
-const DesktopViewport = () => (
+const DesktopViewport: React.FC = () => (
   <div className="absolute top-full left-[-100px] flex justify-start perspective-[2000px]">
     <NavigationMenu.Viewport className="relative mt-2 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-2xl bg-white shadow-2xl border border-slate-100 transition-[width,_height] duration-300 data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut sm:w-[var(--radix-navigation-menu-viewport-width)]" />
   </div>
 );
 
-const MobileMenu = ({ isOpen, setIsOpen, setIsDemoDialogOpen }) => (
+interface MobileMenuProps {
+  isOpen: boolean;
+  setIsOpen: (open: boolean) => void;
+  setIsDemoDialogOpen: (open: boolean) => void;
+}
+
+const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, setIsDemoDialogOpen }) => (
   <AnimatePresence>
     {isOpen && (
       <>
@@ -280,7 +257,13 @@ const MobileMenu = ({ isOpen, setIsOpen, setIsDemoDialogOpen }) => (
   </AnimatePresence>
 );
 
-const MobileAccordionItem = ({ value, title, children }) => (
+interface MobileAccordionItemProps {
+  value: string;
+  title: string;
+  children: React.ReactNode;
+}
+
+const MobileAccordionItem: React.FC<MobileAccordionItemProps> = ({ value, title, children }) => (
   <Accordion.Item value={value} className="border-b border-white/10">
     <Accordion.Trigger className="flex items-center justify-between w-full py-4 text-lg font-semibold text-white group transition-colors">
       {title}
@@ -294,7 +277,12 @@ const MobileAccordionItem = ({ value, title, children }) => (
   </Accordion.Item>
 );
 
-const MobileSubmenu = ({ items, setIsOpen }) => (
+interface MobileSubmenuProps {
+  items: NavItem[];
+  setIsOpen: (open: boolean) => void;
+}
+
+const MobileSubmenu: React.FC<MobileSubmenuProps> = ({ items, setIsOpen }) => (
   <div className="pl-3 border-l-2 border-white/10 space-y-1 ml-2 mb-2">
     {items.map(item => (
       <Link 
@@ -312,7 +300,13 @@ const MobileSubmenu = ({ items, setIsOpen }) => (
   </div>
 );
 
-const MobileLink = ({ href, name, setIsOpen }) => (
+interface MobileLinkProps {
+  href: string;
+  name: string;
+  setIsOpen: (open: boolean) => void;
+}
+
+const MobileLink: React.FC<MobileLinkProps> = ({ href, name, setIsOpen }) => (
   <Link
     to={href}
     className="block py-4 text-lg font-semibold text-white hover:text-white border-b border-white/10 transition-colors"

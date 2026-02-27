@@ -1,12 +1,13 @@
 import { motion } from "motion/react";
 import { ShieldCheck, Lock, FileText, CheckCircle } from "lucide-react";
+import { SectionParticles } from "@/components/common/SectionParticles";
 
 export default function IsoCertification() {
   return (
     <div className="pt-20 bg-white">
       {/* Hero Section */}
       <section 
-        className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white"
+        className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white min-h-[calc(100vh-5rem)] flex items-center"
         style={{ backgroundImage: "url('/images/isocertification3.jpg')" }}
       >
         <div className="absolute inset-0 bg-slate-900/70"></div>
@@ -50,7 +51,7 @@ export default function IsoCertification() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <img src="\images\isocertification2.jpg" alt="Security graphic" className="rounded-2xl shadow-xl" />
+              <img src="/images/isocertification2.jpg" alt="Security graphic" className="rounded-2xl shadow-xl" />
             </motion.div>
           </div>
         </div>
@@ -85,8 +86,9 @@ export default function IsoCertification() {
       </section>
 
       {/* Our Commitment to Security */}
-      <section className="py-20 bg-purple-600 text-white">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="py-20 bg-purple-600 text-white relative overflow-hidden">
+        <SectionParticles />
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-display font-bold mb-4">Our Commitment to Security</h2>
             <p className="text-purple-200 mb-8 max-w-3xl mx-auto leading-relaxed">

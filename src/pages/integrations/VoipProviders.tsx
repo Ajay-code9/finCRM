@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useRequestDemo } from "@/context/RequestDemoContext";
 
 // Featured Providers
 const featuredProviders = [
@@ -71,10 +72,12 @@ const faqs = [
 ];
 
 export default function VoipProviders() {
+  const { setIsDemoDialogOpen } = useRequestDemo();
+
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50 min-h-[calc(100vh-5rem)] flex items-center">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -119,7 +122,10 @@ export default function VoipProviders() {
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{provider.name}</h3>
                 <p className="text-slate-600 mb-8 leading-relaxed flex-grow">{provider.desc}</p>
                 <div className="flex gap-4 mt-auto">
-                  <Button className="flex-1 bg-slate-900 hover:bg-slate-800 text-white rounded-xl">
+                  <Button
+                    className="flex-1 bg-slate-900 hover:bg-slate-800 text-white rounded-xl"
+                    onClick={() => setIsDemoDialogOpen(true)}
+                  >
                     Get Connected
                   </Button>
                   <Button variant="outline" className="flex-1 border-slate-200 hover:bg-slate-50 rounded-xl">
@@ -207,7 +213,10 @@ export default function VoipProviders() {
             <div className="relative z-10">
               <h3 className="text-3xl font-bold mb-4">Need a custom VoIP solution?</h3>
               <p className="text-slate-300 mb-8 text-lg">We can help you integrate with the provider of your choice.</p>
-              <Button className="bg-purple-600 text-white hover:bg-purple-700 rounded-xl px-8 py-6 text-lg font-bold shadow-lg shadow-purple-500/30">
+              <Button
+                className="bg-purple-600 text-white hover:bg-purple-700 rounded-xl px-8 py-6 text-lg font-bold shadow-lg shadow-purple-500/30"
+                onClick={() => setIsDemoDialogOpen(true)}
+              >
                 Contact Us
               </Button>
             </div>

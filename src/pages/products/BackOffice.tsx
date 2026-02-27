@@ -1,12 +1,12 @@
 import { motion } from "motion/react";
-import { 
-  CheckCircle2, 
-  ArrowRight, 
-  Database, 
-  Settings, 
-  Zap, 
-  Users, 
-  Globe, 
+import {
+  CheckCircle2,
+  ArrowRight,
+  Database,
+  Settings,
+  Zap,
+  Users,
+  Globe,
   Code,
   FileText,
   Mail,
@@ -14,16 +14,21 @@ import {
   BarChart3,
   Layers,
   Headphones,
-  Clock
+  Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTA } from "@/components/sections/cta";
+import { FeatureCard } from "@/components/cards/FeatureCard";
+import { useRequestDemo } from "@/context/RequestDemoContext";
+import { SectionParticles } from "@/components/common/SectionParticles";
 
 export default function BackOffice() {
+  const { setIsDemoDialogOpen } = useRequestDemo();
   return (
     <div className="pt-8">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50 min-h-[calc(100vh-5rem)] flex items-center">
+        <div className="product-hero-layer" aria-hidden />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -45,7 +50,7 @@ export default function BackOffice() {
                 A premier ecosystem designed to streamline workflows, enhance client satisfaction, and drive revenue growth through intelligent automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gap-2">
+                <Button size="lg" className="gap-2" onClick={() => setIsDemoDialogOpen(true)}>
                   Request a Demo <ArrowRight className="w-4 h-4" />
                 </Button>
                 <Button variant="outline" size="lg">
@@ -86,50 +91,42 @@ export default function BackOffice() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: Database,
+                icon: <Database className="w-6 h-6" />,
                 title: "Centralized Data Hub",
-                desc: "Securely manage and access comprehensive client profiles, including documentation, contact info, and trading history in one place."
+                desc: "Securely manage and access comprehensive client profiles, including documentation, contact info, and trading history in one place.",
               },
               {
-                icon: Settings,
+                icon: <Settings className="w-6 h-6" />,
                 title: "Tailored Customization",
-                desc: "Perfect for companies requiring specialized workflows and bespoke configurations to match their unique business model."
+                desc: "Perfect for companies requiring specialized workflows and bespoke configurations to match their unique business model.",
               },
               {
-                icon: Zap,
+                icon: <Zap className="w-6 h-6" />,
                 title: "Sales Empowerment",
-                desc: "Equip your sales team with the tools to respond instantly to client needs, boosting conversion and retention rates."
+                desc: "Equip your sales team with the tools to respond instantly to client needs, boosting conversion and retention rates.",
               },
               {
-                icon: Clock,
+                icon: <Clock className="w-6 h-6" />,
                 title: "Operational Efficiency",
-                desc: "Free up valuable employee time by automating routine daily tasks and reducing manual intervention steps."
+                desc: "Free up valuable employee time by automating routine daily tasks and reducing manual intervention steps.",
               },
               {
-                icon: Code,
+                icon: <Code className="w-6 h-6" />,
                 title: "Low-Code Environment",
-                desc: "Reduce reliance on heavy IT infrastructure. Our system is designed to be managed with minimal developer intervention."
+                desc: "Reduce reliance on heavy IT infrastructure. Our system is designed to be managed with minimal developer intervention.",
               },
               {
-                icon: Globe,
+                icon: <Globe className="w-6 h-6" />,
                 title: "Global Collaboration",
-                desc: "Unify all your departments and international offices, allowing them to work seamlessly together on a single platform."
-              }
-            ].map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all"
-              >
-                <div className="w-12 h-12 rounded-xl bg-brand-100 flex items-center justify-center text-brand-600 mb-4">
-                  <item.icon className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{item.desc}</p>
-              </motion.div>
+                desc: "Unify all your departments and international offices, allowing them to work seamlessly together on a single platform.",
+              },
+            ].map((item) => (
+              <FeatureCard
+                key={item.title}
+                icon={item.icon}
+                title={item.title}
+                description={item.desc}
+              />
             ))}
           </div>
         </div>
@@ -318,15 +315,20 @@ export default function BackOffice() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-20 bg-brand-600 text-white text-center">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="py-20 bg-brand-600 text-white text-center relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-linear-to-b from-brand-800/40 to-transparent pointer-events-none"
+          aria-hidden
+        />
+        <SectionParticles />
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
             Want to radically change the way you do business?
           </h2>
           <p className="text-xl text-brand-100 mb-8 max-w-2xl mx-auto">
             Join the hundreds of brokers who have transformed their operations with FinCRM.
           </p>
-          <Button size="lg" variant="secondary" className="gap-2">
+          <Button size="lg" variant="secondary" className="gap-2" onClick={() => setIsDemoDialogOpen(true)}>
             Request a Callback <ArrowRight className="w-4 h-4" />
           </Button>
         </div>

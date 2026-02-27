@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import ScrollToTop from "@/components/utils/ScrollToTop";
@@ -31,45 +31,38 @@ import IsoCertification from "@/pages/company/IsoCertification";
 import Careers from "@/pages/company/Careers";
 import Blog from "@/pages/company/Blog";
 import ContactUs from "@/pages/ContactUs";
+import { appRoutes } from "@/routes/config";
+import { AnimatePresence, motion } from "motion/react";
 
-export default function App() {
-  const [isDemoDialogOpen, setIsDemoDialogOpen] = useState(false);
+function AppLayout() {
+  const location = useLocation();
 
   return (
-    <RequestDemoContext.Provider value={{ isDemoDialogOpen, setIsDemoDialogOpen }}>
-      <Router>
-        <ScrollToTop />
-        <div className="min-h-screen bg-white flex flex-col">
-          <Navbar />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-            <Route path="/solutions" element={<Solutions />} />
-            <Route path="/integrations" element={<Integrations />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/company" element={<Company />} />
-            <Route path="/products/back-office" element={<BackOffice />} />
-            <Route path="/products/prop-trading-crm" element={<PropTradingCRM />} />
-            <Route path="/products/client-area" element={<ClientArea />} />
-
-            <Route path="/products/partner-area" element={<PartnerArea />} />
-            <Route path="/products/b2b-crm" element={<B2BCRM />} />
-            <Route path="/products/service-desk" element={<ServiceDesk />} />
-            <Route path="/features/crm" element={<CRMFeatures />} />
-            <Route path="/features/loyalty-program" element={<LoyaltyProgram />} />
-            <Route path="/integrations/trading-platforms" element={<TradingPlatforms />} />
-            <Route path="/integrations/payment-providers" element={<PaymentProviders />} />
-            <Route path="/integrations/voip-providers" element={<VoipProviders />} />
-            <Route path="/integrations/kyc-providers" element={<KycProviders />} />
-            <Route path="/company/about-us" element={<AboutUs />} />
-            <Route path="/company/partners" element={<Partners />} />
-            <Route path="/company/help-center" element={<HelpCenter />} />
-            <Route path="/company/iso-certification" element={<IsoCertification />} />
-            <Route path="/company/careers" element={<Careers />} />
-            <Route path="/company/blog" element={<Blog />} />
-            <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/products/:slug" element={<ProductDetail />} />
-          </Routes>
+    <>
+      <ScrollToTop />
+      <div className="min-h-screen bg-white flex flex-col">
+        <Navbar />
+        <main className="flex-grow">
+          <AnimatePresence mode="wait" initial={false}>
+            <Routes location={location} key={location.pathname}>
+              {appRoutes.map((route) => (
+                <Route
+                  key={route.path}
+                  path={route.path}
+                  element={
+                    <motion.div
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                      {route.element}
+                    </motion.div>
+                  }
+                />
+              ))}
+            </Routes>
+          </AnimatePresence>
         </main>
         <Footer />
         <RequestDemoDialog>
@@ -77,7 +70,18 @@ export default function App() {
           <></>
         </RequestDemoDialog>
       </div>
-    </Router>
+    </>
+  );
+}
+
+export default function App() {
+  const [isDemoDialogOpen, setIsDemoDialogOpen] = useState(false);
+
+  return (
+    <RequestDemoContext.Provider value={{ isDemoDialogOpen, setIsDemoDialogOpen }}>
+      <Router>
+        <AppLayout />
+      </Router>
     </RequestDemoContext.Provider>
   );
 }

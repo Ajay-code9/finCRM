@@ -15,12 +15,15 @@ import {
   Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRequestDemo } from "@/context/RequestDemoContext";
+import { MolecularParticles } from "@/components/common/MolecularParticles";
 
 export default function PartnerArea() {
+  const { setIsDemoDialogOpen } = useRequestDemo();
   return (
     <div className="pt-8">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50 min-h-[calc(100vh-5rem)] flex items-center">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -42,7 +45,7 @@ export default function PartnerArea() {
                 Equip your Introducing Brokers with the tools they need to generate business and massively expand your brokerage's reach.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20">
+                <Button size="lg" className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20" onClick={() => setIsDemoDialogOpen(true)}>
                   Request a Demo <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
@@ -55,7 +58,7 @@ export default function PartnerArea() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
                 <img 
-                  src="\images\partnerarea1.jpg" 
+                  src="/images/partnerarea1.jpg" 
                   alt="Partner Area Dashboard" 
                   className="w-full h-auto"
                 />
@@ -104,7 +107,7 @@ export default function PartnerArea() {
               className="relative"
             >
               <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50 p-2">
-                <img src="\images\partnerarea2.jpg" alt="IB Dashboard" className="rounded-xl w-full h-auto" />
+              <img src="/images/partnerarea2.jpg" alt="IB Dashboard" className="rounded-xl w-full h-auto" />
               </div>
             </motion.div>
           </div>
@@ -213,6 +216,7 @@ export default function PartnerArea() {
         {/* Background Decor */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-600/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
+        <MolecularParticles />
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -261,7 +265,7 @@ export default function PartnerArea() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/30 to-transparent rounded-3xl transform rotate-3"></div>
               <img 
-                src="\images\partnerarea3.jpg" 
+                src="/images/partnerarea3.jpg" 
                 alt="Partner Benefits" 
                 className="relative rounded-3xl shadow-2xl border border-slate-700 w-full h-auto"
               />
@@ -278,7 +282,7 @@ export default function PartnerArea() {
               <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-8">
                 Ready to transform your brokerage operations?
               </h2>
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20" onClick={() => setIsDemoDialogOpen(true)}>
                 Request a Demo
               </Button>
             </div>

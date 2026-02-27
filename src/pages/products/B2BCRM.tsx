@@ -18,12 +18,16 @@ import {
   ShieldCheck
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRequestDemo } from "@/context/RequestDemoContext";
+import { SectionParticles } from "@/components/common/SectionParticles";
 
 export default function B2BCRM() {
+  const { setIsDemoDialogOpen } = useRequestDemo();
   return (
     <div className="pt-8">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50 min-h-[calc(100vh-5rem)] flex items-center">
+        <div className="product-hero-layer" aria-hidden />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -45,7 +49,7 @@ export default function B2BCRM() {
                 Streamline your internal operations and take your customer service to a new level. Manage customer relations, sales, and data processing with ease.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20">
+                <Button size="lg" className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20" onClick={() => setIsDemoDialogOpen(true)}>
                   Request a Demo <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
@@ -58,7 +62,7 @@ export default function B2BCRM() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
                 <img 
-                  src="\images\b2b1.jpg" 
+                  src="/images/b2b1.jpg" 
                   alt="B2B CRM Dashboard" 
                   className="w-full h-auto"
                 />
@@ -200,7 +204,7 @@ export default function B2BCRM() {
                 className="order-2 lg:order-1"
               >
                 <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50 p-2">
-                  <img src="\images\b2b2.jpg" alt="Customer Service" className="rounded-xl w-full h-auto" />
+                  <img src="/images/b2b2.jpg" alt="Customer Service" className="rounded-xl w-full h-auto" />
                 </div>
               </motion.div>
               <motion.div 
@@ -268,7 +272,7 @@ export default function B2BCRM() {
                 viewport={{ once: true }}
               >
                 <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-slate-50 p-2">
-                  <img src="\images\fincrmm5.jpg" alt="Operational Efficiency" className="rounded-xl w-full h-auto" />
+                  <img src="/images/fincrmm5.jpg" alt="Operational Efficiency" className="rounded-xl w-full h-auto" />
                 </div>
               </motion.div>
             </div>
@@ -387,11 +391,16 @@ export default function B2BCRM() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="bg-slate-50 rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden">
+            <SectionParticles />
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-8">
                 Want to radically change the way you do business?
               </h2>
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20">
+              <Button
+                size="lg"
+                className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20"
+                onClick={() => setIsDemoDialogOpen(true)}
+              >
                 Request a Demo
               </Button>
             </div>

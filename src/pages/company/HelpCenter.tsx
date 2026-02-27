@@ -38,7 +38,7 @@ export default function HelpCenter() {
     <div className="pt-20 bg-white">
       {/* Hero Section */}
       <section 
-        className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white"
+        className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white min-h-[calc(100vh-5rem)] flex items-center"
         style={{ backgroundImage: "url('/images/helpcenter.jpg')" }}
       >
         <div className="absolute inset-0 bg-slate-900/60"></div>

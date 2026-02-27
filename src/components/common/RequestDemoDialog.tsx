@@ -109,10 +109,7 @@ export const RequestDemoDialog: React.FC<RequestDemoDialogProps> = ({ children }
 
               <p className="text-center text-[11px] text-slate-500 mt-2">
                 By continuing, I accept the{" "}
-                <a href="#" className="text-brand-600 hover:text-brand-700 hover:underline font-medium">
-                  Privacy Policy
-                </a>
-                .
+                <span className="text-brand-600 font-medium">Privacy Policy</span>.
               </p>
             </form>
           </div>

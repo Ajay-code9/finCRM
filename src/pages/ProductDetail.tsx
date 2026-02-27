@@ -4,9 +4,11 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { CTA } from "@/components/sections/cta";
+import { useRequestDemo } from "@/context/RequestDemoContext";
 
 export default function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
+  const { setIsDemoDialogOpen } = useRequestDemo();
   const product = products[slug as keyof typeof products];
 
   if (!product) {
@@ -40,7 +42,7 @@ export default function ProductDetail() {
                 <Button size="lg" className="gap-2">
                   Get Started <ArrowRight className="w-4 h-4" />
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" onClick={() => setIsDemoDialogOpen(true)}>
                   Book a Demo
                 </Button>
               </div>

@@ -31,7 +31,7 @@ export default function AboutUs() {
   return (
     <div className="pt-20 bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-24 bg-slate-50 overflow-hidden">
+      <section className="relative py-20 lg:py-24 bg-slate-50 overflow-hidden min-h-[calc(100vh-5rem)] flex items-center">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -46,9 +46,9 @@ export default function AboutUs() {
                 We create smart solutions, tools, and features that help forex companies do their jobs quickly and more efficiently.
               </p>
               <div className="flex items-center gap-4">
-                  <span className="text-sm font-semibold text-slate-500">Certified by:</span>
-                  <img src="\images\tuvaus" alt="TUV Austria" className="h-8" />
-                  <img src="\images\tuvnord" alt="Wallarm" className="h-8" />
+                <span className="text-sm font-semibold text-slate-500">Certified by:</span>
+                <img src="/images/tuv-sud-logo.png" alt="TUV Austria" className="h-8" />
+                <img src="/images/tuvaustria.jpg" alt="Wallarm" className="h-8" />
               </div>
             </motion.div>
             <motion.div 
@@ -58,7 +58,7 @@ export default function AboutUs() {
               className="relative flex items-center justify-center"
             >
               <div className="absolute w-full h-full bg-purple-400 rounded-full blur-3xl opacity-20"></div>
-              <img src="\images\aboutus.jpg" alt="Abstract purple graphic" className="relative w-full max-w-md rounded-full" />
+              <img src="/images/aboutus.jpg" alt="Abstract purple graphic" className="relative w-full max-w-md rounded-full" />
             </motion.div>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function AboutUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <img src="\images\fincrm6.jpg" alt="Dashboard screenshot" className="rounded-2xl shadow-xl" />
+              <img src="/images/fincrm6.jpg" alt="Dashboard screenshot" className="rounded-2xl shadow-xl" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}

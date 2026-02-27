@@ -21,8 +21,8 @@ export default function Careers() {
     <div className="pt-20 bg-white">
       {/* Hero Section */}
       <section 
-        className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white"
-        style={{ backgroundImage: "url('/images/techteam')" }}
+        className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white min-h-[calc(100vh-5rem)] flex items-center"
+        style={{ backgroundImage: "url('/images/techteambg.png')" }}
       >
         <div className="absolute inset-0 bg-slate-900/60"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -54,7 +54,7 @@ export default function Careers() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <img src="\images\techteam2" alt="Team photo" className="rounded-2xl shadow-xl" />
+              <img src="/images/techteam.jpg" alt="Team photo" className="rounded-2xl shadow-xl" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}

@@ -11,12 +11,15 @@ import {
   ExternalLink
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRequestDemo } from "@/context/RequestDemoContext";
 
 export default function TradingPlatforms() {
+  const { setIsDemoDialogOpen } = useRequestDemo();
+
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50 min-h-[calc(100vh-5rem)] flex items-center">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -83,7 +86,10 @@ export default function TradingPlatforms() {
               </div>
 
               <div className="flex gap-4 mt-auto">
-                <Button className="flex-1 bg-purple-600 hover:bg-purple-700 text-white rounded-xl">
+                <Button
+                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white rounded-xl"
+                  onClick={() => setIsDemoDialogOpen(true)}
+                >
                   Get Connected
                 </Button>
                 <Button variant="outline" className="flex-1 border-slate-200 hover:bg-slate-50 rounded-xl">
@@ -130,7 +136,10 @@ export default function TradingPlatforms() {
               </div>
 
               <div className="flex gap-4 mt-auto">
-                <Button className="flex-1 bg-purple-600 hover:bg-purple-700 text-white rounded-xl">
+                <Button
+                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white rounded-xl"
+                  onClick={() => setIsDemoDialogOpen(true)}
+                >
                   Get Connected
                 </Button>
                 <Button variant="outline" className="flex-1 border-slate-200 hover:bg-slate-50 rounded-xl">
@@ -177,7 +186,10 @@ export default function TradingPlatforms() {
               </div>
 
               <div className="flex gap-4 mt-auto">
-                <Button className="flex-1 bg-purple-600 hover:bg-purple-700 text-white rounded-xl">
+                <Button
+                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white rounded-xl"
+                  onClick={() => setIsDemoDialogOpen(true)}
+                >
                   Get Connected
                 </Button>
                 <Button variant="outline" className="flex-1 border-slate-200 hover:bg-slate-50 rounded-xl">
@@ -297,7 +309,11 @@ export default function TradingPlatforms() {
               <p className="text-slate-300 text-lg mb-10">
                 Provide us with your credentials for a seamless connection to the platform of your choice.
               </p>
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20">
+              <Button
+                size="lg"
+                className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20"
+                onClick={() => setIsDemoDialogOpen(true)}
+              >
                 Get Connected Now
               </Button>
             </div>

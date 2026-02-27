@@ -22,6 +22,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { useRequestDemo } from "@/context/RequestDemoContext";
 
 interface PaymentProvider {
   name: string;
@@ -263,6 +264,7 @@ const filters = [
 export default function PaymentProviders() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  const { setIsDemoDialogOpen } = useRequestDemo();
 
   const toggleFilter = (filter: string) => {
     setActiveFilters(prev => 
@@ -282,7 +284,7 @@ export default function PaymentProviders() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50 min-h-[calc(100vh-5rem)] flex items-center">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -330,7 +332,11 @@ export default function PaymentProviders() {
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">{provider.name}</h3>
                 <p className="text-slate-600 mb-8 leading-relaxed">{provider.desc}</p>
                 <div className="flex gap-3 mt-auto">
-                  <Button variant="outline" className="flex-1 rounded-xl border-slate-200 group-hover:bg-purple-50 group-hover:text-purple-700 group-hover:border-purple-200">
+                  <Button
+                    variant="outline"
+                    className="flex-1 rounded-xl border-slate-200 group-hover:bg-purple-50 group-hover:text-purple-700 group-hover:border-purple-200"
+                    onClick={() => setIsDemoDialogOpen(true)}
+                  >
                     Get Connected
                   </Button>
                   <Button variant="ghost" size="icon" className="rounded-xl text-slate-400 hover:text-purple-600">
@@ -436,7 +442,10 @@ export default function PaymentProviders() {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h3 className="text-2xl font-bold text-slate-900 mb-4">Can't find your PSP?</h3>
           <p className="text-slate-600 mb-6">No need to panic! We are constantly adding new integrations.</p>
-          <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-xl px-8">
+          <Button
+            className="bg-slate-900 text-white hover:bg-slate-800 rounded-xl px-8"
+            onClick={() => setIsDemoDialogOpen(true)}
+          >
             Contact Us
           </Button>
         </div>

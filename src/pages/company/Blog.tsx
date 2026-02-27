@@ -31,7 +31,7 @@ export default function Blog() {
     <div className="pt-20 bg-white">
       {/* Hero Section */}
       <section 
-        className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white"
+        className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white min-h-[calc(100vh-5rem)] flex items-center"
        style={{ backgroundImage: "url('/images/blog.jpg')" }}
       >
         <div className="absolute inset-0 bg-slate-900/60"></div>
@@ -66,7 +66,7 @@ export default function Blog() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-purple-100 hover:-translate-y-1 transition-all group"
               >
-                <Link to="#" className="block">
+                <Link to="/company" className="block">
                   <img src={post.image} alt={post.title} className="w-full h-56 object-cover" />
                   <div className="p-6">
                     <h3 className="font-bold text-slate-800 text-xl mb-3 group-hover:text-purple-600 transition-colors h-24">{post.title}</h3>

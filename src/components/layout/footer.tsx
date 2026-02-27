@@ -8,8 +8,9 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-400 py-12 md:py-16">
-      <div className="container mx-auto px-4 md:px-6">
+    <footer className="bg-slate-900 text-slate-400 py-12 md:py-16 relative overflow-hidden">
+      <div className="footer-rays" aria-hidden />
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
@@ -24,18 +25,34 @@ export function Footer() {
               Specialized, fully customizable CRM and back-office solution for forex brokers and financial institutions.
             </p>
             <div className="flex items-center gap-4 justify-center md:justify-start">
-              <a href="#" className="hover:text-white transition-colors">
+              <button
+                type="button"
+                className="hover:text-white transition-colors"
+                aria-label="Visit our Facebook page"
+              >
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+              </button>
+              <button
+                type="button"
+                className="hover:text-white transition-colors"
+                aria-label="Visit our Twitter profile"
+              >
                 <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+              </button>
+              <button
+                type="button"
+                className="hover:text-white transition-colors"
+                aria-label="Visit our LinkedIn page"
+              >
                 <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+              </button>
+              <button
+                type="button"
+                className="hover:text-white transition-colors"
+                aria-label="Visit our Instagram profile"
+              >
                 <Instagram className="w-5 h-5" />
-              </a>
+              </button>
             </div>
           </div>
 
@@ -65,9 +82,15 @@ export function Footer() {
         <div className="pt-8 border-t border-slate-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
           <p>&copy; {new Date().getFullYear()} FinCRM. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link to="#" className="hover:text-white transition-colors">Terms of Service</Link>
-            <Link to="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="#" className="hover:text-white transition-colors">Cookie Policy</Link>
+            <button type="button" className="hover:text-white transition-colors">
+              Terms of Service
+            </button>
+            <button type="button" className="hover:text-white transition-colors">
+              Privacy Policy
+            </button>
+            <button type="button" className="hover:text-white transition-colors">
+              Cookie Policy
+            </button>
           </div>
         </div>
       </div>

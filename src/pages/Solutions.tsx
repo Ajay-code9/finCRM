@@ -3,6 +3,7 @@ import { CheckCircle2, Server, Shield, Zap, Globe, Users, BarChart3, Smartphone 
 import { Button } from "@/components/ui/button";
 import { CTA } from "@/components/sections/cta";
 import { useNavigate } from "react-router-dom";
+import { DataNetworkParticles } from "@/components/common/DataNetworkParticles";
 
 const solutions = [
   {
@@ -130,8 +131,9 @@ export default function Solutions() {
       </section>
 
       {/* Tech Stack / Infrastructure */}
-      <section className="py-20 bg-slate-900 text-white">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <DataNetworkParticles />
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Built on Enterprise Infrastructure</h2>
             <p className="text-slate-400 text-lg">
@@ -140,21 +142,21 @@ export default function Solutions() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-slate-800 border border-slate-700">
+            <div className="p-8 rounded-2xl bg-slate-800 border border-slate-700 shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:-translate-y-1 transition-all duration-300 ease-out">
               <Zap className="w-10 h-10 text-purple-400 mb-6" />
               <h3 className="text-xl font-bold mb-3">Low Latency</h3>
               <p className="text-slate-400">
                 Optimized for high-frequency trading environments with sub-millisecond execution times.
               </p>
             </div>
-            <div className="p-8 rounded-2xl bg-slate-800 border border-slate-700">
+            <div className="p-8 rounded-2xl bg-slate-800 border border-slate-700 shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:-translate-y-1 transition-all duration-300 ease-out">
               <Shield className="w-10 h-10 text-purple-400 mb-6" />
               <h3 className="text-xl font-bold mb-3">Bank-Grade Security</h3>
               <p className="text-slate-400">
                 ISO 27001 certified infrastructure with DDoS protection and end-to-end encryption.
               </p>
             </div>
-            <div className="p-8 rounded-2xl bg-slate-800 border border-slate-700">
+            <div className="p-8 rounded-2xl bg-slate-800 border border-slate-700 shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:-translate-y-1 transition-all duration-300 ease-out">
               <Server className="w-10 h-10 text-purple-400 mb-6" />
               <h3 className="text-xl font-bold mb-3">99.99% Uptime</h3>
               <p className="text-slate-400">

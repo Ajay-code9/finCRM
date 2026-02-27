@@ -8,7 +8,7 @@ export default function ContactUs() {
   return (
     <div className="pt-20 bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 bg-slate-50 overflow-hidden">
+      <section className="relative py-20 lg:py-32 bg-slate-50 overflow-hidden min-h-[calc(100vh-5rem)] flex items-center">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -34,8 +34,18 @@ export default function ContactUs() {
               </motion.div>
             </div>
             <div className="relative flex items-center justify-center">
-              {/* Placeholder for the graphic element */}
-              <div className="w-80 h-80 bg-purple-100 rounded-full"></div>
+              <div className="relative max-w-md w-full">
+                <div className="rounded-3xl bg-white border border-slate-200 shadow-[0_20px_60px_-32px_rgba(15,23,42,0.9)] overflow-hidden">
+                  <div className="bg-slate-100 flex items-center justify-center p-4">
+                    <img
+                      src="/images/getintouch.jpg"
+                      alt="FinCRM team at work"
+                      className="max-w-full h-auto object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

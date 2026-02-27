@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { 
   ArrowRight, 
@@ -29,7 +29,7 @@ import {
   PieChart 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { RequestDemoContext } from "@/context/RequestDemoContext";
+import { useRequestDemo } from "@/context/RequestDemoContext";
 
 // Define categories
 const categories = [
@@ -239,14 +239,14 @@ const features = [
 
 export default function CRMFeatures() {
   const [activeCategory, setActiveCategory] = useState("Modules");
-  const { setIsDemoDialogOpen } = useContext(RequestDemoContext)!;
+  const { setIsDemoDialogOpen } = useRequestDemo();
 
   const filteredFeatures = features.filter(f => f.category === activeCategory);
 
   return (
     <div className="pt-8">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-slate-50 min-h-[calc(100vh-5rem)] flex items-center">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div

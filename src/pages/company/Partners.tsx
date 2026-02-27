@@ -1,23 +1,26 @@
 import { motion } from "motion/react";
 import { Handshake, Zap, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const partners = [
-  { name: "TradingView", logo: "https://logo.clearbit.com/tradingview.com" },
-  { name: "MetaQuotes", logo: "https://logo.clearbit.com/metaquotes.net" },
-  { name: "Stripe", logo: "https://logo.clearbit.com/stripe.com" },
-  { name: "PayPal", logo: "https://logo.clearbit.com/paypal.com" },
-  { name: "Twilio", logo: "https://logo.clearbit.com/twilio.com" },
-  { name: "Salesforce", logo: "https://logo.clearbit.com/salesforce.com" },
-  { name: "HubSpot", logo: "https://logo.clearbit.com/hubspot.com" },
-  { name: "Zendesk", logo: "https://logo.clearbit.com/zendesk.com" },
+  { name: "Axiom Markets" },
+  { name: "Nova Liquidity" },
+  { name: "PrimeFlow Tech" },
+  { name: "Aurora Pay" },
+  { name: "Vertex Data Systems" },
+  { name: "BlueStone Capital" },
+  { name: "Helix Connectivity" },
+  { name: "Quantum Signals" },
 ];
 
 export default function Partners() {
+  const navigate = useNavigate();
+
   return (
     <div className="pt-20 bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-24 bg-slate-50 overflow-hidden">
+      <section className="relative py-20 lg:py-24 bg-slate-50 overflow-hidden min-h-[calc(100vh-5rem)] flex items-center">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -39,7 +42,7 @@ export default function Partners() {
               className="relative flex items-center justify-center"
             >
               <div className="absolute w-full h-full bg-purple-400 rounded-full blur-3xl opacity-20"></div>
-              <img src="\images\partnerarea1.jpg" alt="Abstract partner graphic" className="relative w-full max-w-md" />
+              <img src="/images/partnerarea1.jpg" alt="Abstract partner graphic" className="relative w-full max-w-md" />
             </motion.div>
           </div>
         </div>
@@ -64,7 +67,9 @@ export default function Partners() {
                 transition={{ delay: i * 0.05 }}
                 className="flex items-center justify-center p-6 bg-white rounded-2xl border border-slate-100 shadow-md hover:shadow-purple-100 hover:-translate-y-1 transition-all"
               >
-                <img src={partner.logo} alt={partner.name} className="h-10 grayscale hover:grayscale-0 transition-all" />
+                <span className="text-sm font-semibold text-slate-800 text-center">
+                  {partner.name}
+                </span>
               </motion.div>
             ))}
           </div>
@@ -85,7 +90,10 @@ export default function Partners() {
               <p className="text-slate-600 mb-8 leading-relaxed">
                 Interested in partnering with us? We are always looking for new opportunities to collaborate and innovate. Join us in shaping the future of brokerage technology.
               </p>
-              <Button className="bg-purple-600 text-white hover:bg-purple-700 rounded-xl px-8 py-3 text-lg">
+              <Button
+                className="bg-purple-600 text-white hover:bg-purple-700 rounded-xl px-8 py-3 text-lg"
+                onClick={() => navigate("/contact-us")}
+              >
                 Contact Us
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
@@ -96,7 +104,7 @@ export default function Partners() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <img src="\images\partnerarea2.jpg" alt="Partnership graphic" className="rounded-2xl shadow-xl" />
+              <img src="/images/partnerarea2.jpg" alt="Partnership graphic" className="rounded-2xl shadow-xl" />
             </motion.div>
           </div>
         </div>
