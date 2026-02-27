@@ -227,17 +227,17 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, setIsDemoDia
           <div className="p-5 flex-grow overflow-y-auto no-scrollbar">
             <Accordion.Root type="multiple" className="flex flex-col">
               <MobileAccordionItem value="products" title="Products">
-                <MobileSubmenu items={products.forex} setIsOpen={setIsOpen} />
-                <MobileSubmenu items={products.b2b} setIsOpen={setIsOpen} />
+                <MobileSubmenu items={productsNav.forex} setIsOpen={setIsOpen} />
+                <MobileSubmenu items={productsNav.b2b} setIsOpen={setIsOpen} />
               </MobileAccordionItem>
               <MobileAccordionItem value="features" title="Features">
-                <MobileSubmenu items={features} setIsOpen={setIsOpen} />
+                <MobileSubmenu items={featuresNav} setIsOpen={setIsOpen} />
               </MobileAccordionItem>
               <MobileAccordionItem value="integration" title="Integration">
-                <MobileSubmenu items={integrations} setIsOpen={setIsOpen} />
+                <MobileSubmenu items={integrationsNav} setIsOpen={setIsOpen} />
               </MobileAccordionItem>
               <MobileAccordionItem value="company" title="Company">
-                <MobileSubmenu items={company} setIsOpen={setIsOpen} />
+                <MobileSubmenu items={companyNav} setIsOpen={setIsOpen} />
               </MobileAccordionItem>
               <MobileLink href="/pricing" name="Pricing" setIsOpen={setIsOpen} />
               <MobileLink href="/contact-us" name="Contact us" setIsOpen={setIsOpen} />
