@@ -26,7 +26,8 @@ import {
   Database, 
   Workflow, 
   Share2, 
-  PieChart 
+  PieChart,
+  CheckCircle2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRequestDemo } from "@/context/RequestDemoContext";
@@ -51,7 +52,7 @@ const features = [
     title: "Live Chat Integration",
     description: "Boost client engagement with our seamless Instant Message Module. Integrate popular messaging platforms directly into your CRM to streamline communication and improve response times.",
     icon: MessageSquare,
-    color: "bg-purple-100 border-purple-200 text-purple-700"
+    color: "bg-brand-50 border-brand-100 text-brand-700"
   },
   {
     category: "Modules",
@@ -72,14 +73,14 @@ const features = [
     title: "Trade Estimator",
     description: "Empower traders with the Trading Calculator Module. Provide real-time calculations for margins, pip values, and spreads directly in the client dashboard, fully compatible with MT4/MT5.",
     icon: Calculator,
-    color: "bg-purple-100 border-purple-200 text-purple-700"
+    color: "bg-brand-50 border-brand-100 text-brand-700"
   },
   {
     category: "Modules",
     title: "Rapid Payouts",
     description: "Automate your financial flows with the Instant Withdrawals Module. Set custom limits and approval rules to offer lightning-fast fund access to your clients while maintaining security.",
     icon: Zap,
-    color: "bg-purple-100 border-purple-200 text-purple-700"
+    color: "bg-brand-50 border-brand-100 text-brand-700"
   },
   {
     category: "Modules",
@@ -95,7 +96,7 @@ const features = [
     title: "Multi-Level IB Network",
     description: "Revolutionize your partnership program with the Open Network IB Module. Configure flexible commission structures, multi-tier rebates, and allow clients to choose their preferred IB upon registration.",
     icon: Network,
-    color: "bg-purple-100 border-purple-200 text-purple-700"
+    color: "bg-brand-50 border-brand-100 text-brand-700"
   },
   {
     category: "IB",
@@ -111,7 +112,7 @@ const features = [
     title: "Email Integration",
     description: "Centralize your communications with the Mail Module. Link corporate mailboxes directly to the CRM to track all client correspondence, use templates, and ensure no lead is left behind.",
     icon: Mail,
-    color: "bg-purple-100 border-purple-200 text-purple-700"
+    color: "bg-brand-50 border-brand-100 text-brand-700"
   },
   {
     category: "Marketing",
@@ -141,7 +142,7 @@ const features = [
     title: "Auto-Bonus System",
     description: "Streamline incentives with the Automatic Bonus Module. Set precise conditions for deposit bonuses or welcome credits, automating the distribution process to reward loyal traders effortlessly.",
     icon: Gift,
-    color: "bg-purple-100 border-purple-200 text-purple-700"
+    color: "bg-brand-50 border-brand-100 text-brand-700"
   },
   {
     category: "Rewards",
@@ -162,7 +163,7 @@ const features = [
     title: "Rebate System",
     description: "Incentivize volume with the Cashback Module. Configure automated cashback rules based on trading activity, giving clients a tangible reason to keep trading with your brokerage.",
     icon: Coins,
-    color: "bg-purple-100 border-purple-200 text-purple-700"
+    color: "bg-brand-50 border-brand-100 text-brand-700"
   },
 
   // Reporting
@@ -178,7 +179,7 @@ const features = [
     title: "Compliance Manager",
     description: "Navigate regulations with ease using the Regulation Module. Generate specific reports for CySEC, FCA, or other bodies, including transaction reporting and risk categorization.",
     icon: Scale,
-    color: "bg-purple-100 border-purple-200 text-purple-700"
+    color: "bg-brand-50 border-brand-100 text-brand-700"
   },
 
   // API
@@ -194,7 +195,7 @@ const features = [
     title: "Admin REST API",
     description: "Gain full control with the REST API Module. Integrate external systems, automate back-office tasks, and sync data across your entire infrastructure with our comprehensive API endpoints.",
     icon: Server,
-    color: "bg-purple-100 border-purple-200 text-purple-700"
+    color: "bg-brand-50 border-brand-100 text-brand-700"
   },
 
   // Additional
@@ -210,7 +211,7 @@ const features = [
     title: "Server Scaling",
     description: "Grow your infrastructure with the Additional MT Live Server module. Connect multiple trading servers to a single CRM instance to support a growing client base.",
     icon: Database,
-    color: "bg-purple-100 border-purple-200 text-purple-700"
+    color: "bg-brand-50 border-brand-100 text-brand-700"
   },
   {
     category: "Additional",
@@ -233,7 +234,7 @@ const features = [
     title: "PAMM Accounts",
     description: "Offer managed account services with Brokeree PAMM. Allow money managers to trade on behalf of investors with automated profit distribution and performance tracking.",
     icon: PieChart,
-    color: "bg-purple-100 border-purple-200 text-purple-700"
+    color: "bg-brand-50 border-brand-100 text-brand-700"
   }
 ];
 
@@ -255,7 +256,7 @@ export default function CRMFeatures() {
               transition={{ duration: 0.5 }}
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-900 leading-tight mb-6">
-                CRM <span className="text-purple-600">Features</span>
+                CRM <span className="text-brand-600">Features</span>
               </h1>
               <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed font-light">
                 Welcome to the most feature-rich CRM ecosystem on the market. Modular, scalable, and designed for growth.
@@ -263,7 +264,7 @@ export default function CRMFeatures() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20 text-lg px-8 h-14 rounded-xl"
+                  className="gap-2 bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)] text-lg px-8 h-14 rounded-xl"
                   onClick={() => setIsDemoDialogOpen(true)}
                 >
                   Request a Demo <ArrowRight className="w-5 h-5" />
@@ -278,7 +279,7 @@ export default function CRMFeatures() {
             >
               {/* Abstract 3D-like Illustration Placeholder */}
               <div className="relative w-full max-w-md aspect-square">
-                <div className="absolute inset-0 bg-purple-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                <div className="absolute inset-0 bg-brand-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
                 <div className="relative z-10 bg-white rounded-3xl shadow-2xl p-6 border border-slate-100 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex gap-2">
@@ -290,11 +291,11 @@ export default function CRMFeatures() {
                   </div>
                   <div className="space-y-4">
                     <div className="h-32 bg-slate-50 rounded-xl border border-slate-100 flex items-end p-4 gap-2">
-                      <div className="w-1/5 h-[40%] bg-purple-200 rounded-t-md"></div>
-                      <div className="w-1/5 h-[70%] bg-purple-300 rounded-t-md"></div>
-                      <div className="w-1/5 h-[50%] bg-purple-400 rounded-t-md"></div>
-                      <div className="w-1/5 h-[90%] bg-purple-500 rounded-t-md"></div>
-                      <div className="w-1/5 h-[60%] bg-purple-600 rounded-t-md"></div>
+                      <div className="w-1/5 h-[40%] bg-brand-200 rounded-t-md"></div>
+                      <div className="w-1/5 h-[70%] bg-brand-300 rounded-t-md"></div>
+                      <div className="w-1/5 h-[50%] bg-brand-400 rounded-t-md"></div>
+                      <div className="w-1/5 h-[90%] bg-brand-500 rounded-t-md"></div>
+                      <div className="w-1/5 h-[60%] bg-brand-600 rounded-t-md"></div>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="h-20 bg-slate-50 rounded-xl border border-slate-100 p-3">
@@ -339,9 +340,9 @@ export default function CRMFeatures() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
-              We work relentlessly to offer you the features you need to take your brokerage to the next level. Each of our tools was developed as a <span className="font-bold text-purple-600">module</span>, meaning they can be quickly and easily added to your CRM. This ensures you're not forced to pay for tools you don't use, while allowing you to scale effortlessly as your business grows.
-            </p>
+              <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+                We work relentlessly to offer you the features you need to take your brokerage to the next level. Each of our tools was developed as a <span className="font-bold text-brand-600">module</span>, meaning they can be quickly and easily added to your CRM. This ensures you're not forced to pay for tools you don't use, while allowing you to scale effortlessly as your business grows.
+              </p>
           </div>
         </div>
       </section>
@@ -359,8 +360,8 @@ export default function CRMFeatures() {
                   onClick={() => setActiveCategory(cat)}
                   className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
                     activeCategory === cat
-                      ? "bg-purple-600 text-white shadow-md transform scale-105"
-                      : "bg-white text-slate-600 hover:bg-purple-50 hover:text-purple-600 border border-slate-200 hover:border-purple-200 shadow-sm"
+                      ? "bg-brand-600 text-white shadow-md transform scale-105"
+                      : "bg-white text-slate-600 hover:bg-brand-50 hover:text-brand-600 border border-slate-200 hover:border-brand-200 shadow-sm"
                   }`}
                 >
                   {cat}
@@ -413,7 +414,7 @@ export default function CRMFeatures() {
             <div className="relative z-10 max-w-2xl">
               <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6 leading-tight">
                 Want to radically change <br/>
-                <span className="text-purple-600">the way you do business?</span>
+                <span className="text-brand-600">the way you do business?</span>
               </h2>
               <p className="text-lg text-slate-600 mb-8">
                 Join hundreds of brokers who have scaled their operations with our modular CRM.
@@ -430,12 +431,10 @@ export default function CRMFeatures() {
             </div>
 
             {/* Decor */}
-            <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-purple-50 to-transparent opacity-50 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-brand-50 to-transparent opacity-50 pointer-events-none"></div>
           </div>
         </div>
       </section>
     </div>
   );
 }
-
-import { CheckCircle2 } from "lucide-react";

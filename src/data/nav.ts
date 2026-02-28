@@ -10,7 +10,6 @@ import {
   Wallet,
   Phone,
   ShieldCheck,
-  CheckCircle,
   FileText,
 } from 'lucide-react';
 
@@ -129,12 +128,6 @@ export const companyNav: NavItem[] = [
     href: '/company/help-center',
     icon: Headphones,
     description: 'Find answers in our detailed FAQs.',
-  },
-  {
-    name: 'ISO Certification',
-    href: '/company/iso-certification',
-    icon: CheckCircle,
-    description: 'Committed to security with ISO 27001:2022.',
   },
   {
     name: 'Careers',

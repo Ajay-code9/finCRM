@@ -7,7 +7,7 @@ export default function IsoCertification() {
     <div className="pt-20 bg-white">
       {/* Hero Section */}
       <section 
-        className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white min-h-[calc(100vh-5rem)] flex items-center"
+        className="relative py-12 lg:py-16 bg-slate-800 bg-cover bg-center text-white"
         style={{ backgroundImage: "url('/images/isocertification3.jpg')" }}
       >
         <div className="absolute inset-0 bg-slate-900/70"></div>
@@ -18,9 +18,9 @@ export default function IsoCertification() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <ShieldCheck className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+              <ShieldCheck className="w-16 h-16 text-brand-500 mx-auto mb-6" />
               <h1 className="text-4xl md:text-6xl font-display font-bold leading-tight mb-6">
-                ISO 27001:2022 <span className="text-purple-400">Certified</span>
+                ISO 27001:2022 <span className="text-brand-500">Certified</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-3xl mx-auto">
                 Demonstrating our unwavering commitment to information security, data protection, and operational excellence.
@@ -66,17 +66,17 @@ export default function IsoCertification() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="p-8 bg-white rounded-2xl shadow-lg text-center">
-                <Lock className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <Lock className="w-12 h-12 text-brand-600 mx-auto mb-4" />
                 <h3 className="font-bold text-slate-800 text-xl mb-2">Confidentiality</h3>
                 <p className="text-slate-500">Ensuring that information is not disclosed to unauthorized individuals, entities, or processes.</p>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="p-8 bg-white rounded-2xl shadow-lg text-center">
-                <CheckCircle className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <CheckCircle className="w-12 h-12 text-brand-600 mx-auto mb-4" />
                 <h3 className="font-bold text-slate-800 text-xl mb-2">Integrity</h3>
                 <p className="text-slate-500">Maintaining the consistency, accuracy, and trustworthiness of information over its entire lifecycle.</p>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="p-8 bg-white rounded-2xl shadow-lg text-center">
-                <FileText className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <FileText className="w-12 h-12 text-brand-600 mx-auto mb-4" />
                 <h3 className="font-bold text-slate-800 text-xl mb-2">Availability</h3>
                 <p className="text-slate-500">Ensuring that information is accessible and usable upon demand by an authorized party.</p>
               </motion.div>
@@ -86,12 +86,12 @@ export default function IsoCertification() {
       </section>
 
       {/* Our Commitment to Security */}
-      <section className="py-20 bg-purple-600 text-white relative overflow-hidden">
+      <section className="py-20 bg-linear-to-r from-brand-700 via-brand-600 to-emerald-500 text-white relative overflow-hidden">
         <SectionParticles />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-display font-bold mb-4">Our Commitment to Security</h2>
-            <p className="text-purple-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-emerald-100 mb-8 max-w-3xl mx-auto leading-relaxed">
               Achieving ISO 27001:2022 certification is a testament to our dedication to implementing and maintaining the highest standards of information security. Our clients can be confident that their data is protected by a robust and certified security framework.
             </p>
           </div>

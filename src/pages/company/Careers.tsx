@@ -21,7 +21,7 @@ export default function Careers() {
     <div className="pt-20 bg-white">
       {/* Hero Section */}
       <section 
-        className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white min-h-[calc(100vh-5rem)] flex items-center"
+        className="relative py-12 lg:py-16 bg-slate-800 bg-cover bg-center text-white"
         style={{ backgroundImage: "url('/images/techteambg.png')" }}
       >
         <div className="absolute inset-0 bg-slate-900/60"></div>
@@ -32,9 +32,9 @@ export default function Careers() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <Briefcase className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+              <Briefcase className="w-16 h-16 text-brand-500 mx-auto mb-6" />
               <h1 className="text-4xl md:text-6xl font-display font-bold leading-tight mb-6">
-                Join Our <span className="text-purple-400">Dynamic Team</span>
+                Join Our <span className="text-brand-500">Dynamic Team</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-3xl mx-auto">
                 Be a part of a passionate team that is dedicated to building innovative solutions and shaping the future of the brokerage industry.
@@ -65,8 +65,8 @@ export default function Careers() {
               <h2 className="text-3xl font-display font-bold text-slate-900 mb-8">Why Join Us?</h2>
               <div className="grid grid-cols-2 gap-8">
                 {perks.map((perk, i) => (
-                  <div key={i} className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center shrink-0">
+                    <div key={i} className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center shrink-0">
                       <perk.icon className="w-6 h-6" />
                     </div>
                     <div>
@@ -84,7 +84,7 @@ export default function Careers() {
       {/* Open Positions */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
+            <div className="text-center mb-16">
             <h2 className="text-3xl font-display font-bold text-slate-900">Open Positions</h2>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -96,13 +96,13 @@ export default function Careers() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-8 bg-white rounded-2xl shadow-lg flex items-center justify-between hover:shadow-purple-100 hover:-translate-y-1 transition-all"
+                  className="p-8 bg-white rounded-2xl shadow-lg flex items-center justify-between hover:shadow-[0_10px_30px_-16px_rgba(16,185,129,0.7)] hover:-translate-y-1 transition-all"
                 >
                   <div>
                     <h3 className="font-bold text-slate-800 text-xl mb-1">{job.title}</h3>
                     <p className="text-slate-500">{job.location} &bull; {job.department}</p>
                   </div>
-                  <Button className="bg-purple-600 text-white hover:bg-purple-700 rounded-xl px-6 py-3">
+                  <Button className="bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white rounded-xl px-6 py-3">
                     Apply Now
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>

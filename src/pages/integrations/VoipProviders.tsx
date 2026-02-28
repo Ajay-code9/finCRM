@@ -1,18 +1,9 @@
-import { useState } from "react";
 import { motion } from "motion/react";
 import { 
   Phone, 
-  Globe, 
   MessageSquare, 
   Headphones, 
-  Activity, 
-  CheckCircle2,
-  HelpCircle,
-  ChevronDown,
-  ChevronUp,
-  Server,
-  Shield,
-  Zap
+  Activity
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -36,7 +27,7 @@ const featuredProviders = [
     name: "Commpeak",
     desc: "A leading provider of cloud-based communication solutions. Optimize your business operations with advanced VoIP features.",
     icon: Activity,
-    color: "bg-purple-50 text-purple-600"
+    color: "bg-brand-50 text-brand-600"
   },
   {
     name: "Coperato",
@@ -85,15 +76,15 @@ export default function VoipProviders() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-bold mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 text-brand-700 text-sm font-bold mb-8">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
                 </span>
                 12+ Integrations Available
               </div>
               <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-                Crystal Clear <span className="text-purple-600">VoIP Solutions</span>
+                Crystal Clear <span className="text-brand-600">VoIP Solutions</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
                 Connect with your customers globally using our top-tier VoIP providers. Ensure reliability, quality, and seamless integration with your business operations.
@@ -114,7 +105,7 @@ export default function VoipProviders() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-lg hover:shadow-xl hover:border-purple-100 transition-all group flex flex-col"
+                className="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-lg hover:shadow-xl hover:border-brand-100 transition-all group flex flex-col"
               >
                 <div className={`w-16 h-16 rounded-2xl ${provider.color} flex items-center justify-center mb-6 shadow-sm`}>
                   <provider.icon className="w-8 h-8" />
@@ -155,12 +146,12 @@ export default function VoipProviders() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-2xl border border-slate-100 flex items-center gap-3 hover:border-purple-200 hover:shadow-md transition-all group"
+                className="bg-white p-6 rounded-2xl border border-slate-100 flex items-center gap-3 hover:border-brand-200 hover:shadow-md transition-all group"
               >
-                <div className="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center text-slate-400 group-hover:bg-purple-50 group-hover:text-purple-600 transition-colors">
+                <div className="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center text-slate-400 group-hover:bg-brand-50 group-hover:text-brand-600 transition-colors">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span className="font-bold text-slate-700 group-hover:text-purple-700 transition-colors">{provider}</span>
+                <span className="font-bold text-slate-700 group-hover:text-brand-700 transition-colors">{provider}</span>
               </motion.div>
             ))}
           </div>
@@ -214,13 +205,13 @@ export default function VoipProviders() {
               <h3 className="text-3xl font-bold mb-4">Need a custom VoIP solution?</h3>
               <p className="text-slate-300 mb-8 text-lg">We can help you integrate with the provider of your choice.</p>
               <Button
-                className="bg-purple-600 text-white hover:bg-purple-700 rounded-xl px-8 py-6 text-lg font-bold shadow-lg shadow-purple-500/30"
+                className="bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white rounded-xl px-8 py-6 text-lg font-bold shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]"
                 onClick={() => setIsDemoDialogOpen(true)}
               >
                 Contact Us
               </Button>
             </div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500 rounded-full blur-[80px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-500 rounded-full blur-[80px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full blur-[80px] opacity-20 translate-y-1/2 -translate-x-1/2"></div>
           </div>
         </div>

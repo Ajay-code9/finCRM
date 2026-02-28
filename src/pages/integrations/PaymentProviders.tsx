@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { 
-  ArrowRight, 
   CreditCard, 
-  Globe, 
   Search, 
-  Filter, 
   ShieldCheck, 
   Zap, 
   Wallet, 
   Landmark,
   Coins,
-  CheckCircle2,
   ExternalLink,
   Banknote, // New
   Bitcoin,  // New
@@ -43,7 +39,7 @@ const featuredProviders = [
     name: "Deus X Pay",
     desc: "Faster, cheaper & safer crypto deposits & withdrawals. Enable crypto-to-fiat and crypto-to-crypto transactions alongside traditional methods.",
     icon: Coins,
-    color: "bg-purple-50 text-purple-600"
+    color: "bg-brand-50 text-brand-600"
   },
   {
     name: "LetKnow",
@@ -292,15 +288,15 @@ export default function PaymentProviders() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-bold mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 text-brand-700 text-sm font-bold mb-8">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
                 </span>
                 340+ Integrations Available
               </div>
               <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-                Master Your <span className="text-purple-600">Payments</span>
+                Master Your <span className="text-brand-600">Payments</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
                 Access the most popular PSPs on the market and alternative solutions for specific regions. We handle the entire integration process quickly and seamlessly.
@@ -324,7 +320,7 @@ export default function PaymentProviders() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:border-purple-100 transition-all group"
+                className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:border-brand-100 transition-all group"
               >
                 <div className={`w-14 h-14 rounded-2xl ${provider.color} flex items-center justify-center mb-6`}>
                   <provider.icon className="w-7 h-7" />
@@ -334,12 +330,12 @@ export default function PaymentProviders() {
                 <div className="flex gap-3 mt-auto">
                   <Button
                     variant="outline"
-                    className="flex-1 rounded-xl border-slate-200 group-hover:bg-purple-50 group-hover:text-purple-700 group-hover:border-purple-200"
+                    className="flex-1 rounded-xl border-slate-200 group-hover:bg-brand-50 group-hover:text-brand-700 group-hover:border-brand-200"
                     onClick={() => setIsDemoDialogOpen(true)}
                   >
                     Get Connected
                   </Button>
-                  <Button variant="ghost" size="icon" className="rounded-xl text-slate-400 hover:text-purple-600">
+                  <Button variant="ghost" size="icon" className="rounded-xl text-slate-400 hover:text-brand-600">
                     <ExternalLink className="w-5 h-5" />
                   </Button>
                 </div>
@@ -364,7 +360,7 @@ export default function PaymentProviders() {
                 <Input 
                   type="text" 
                   placeholder="Search PSP..." 
-                  className="w-full pl-12 h-14 rounded-2xl border-slate-200 bg-white text-lg shadow-sm focus:ring-purple-500/20"
+                  className="w-full pl-12 h-14 rounded-2xl border-slate-200 bg-white text-lg shadow-sm focus:ring-brand-500/20"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -377,8 +373,8 @@ export default function PaymentProviders() {
                     onClick={() => toggleFilter(filter)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                       activeFilters.includes(filter)
-                        ? "bg-purple-600 text-white shadow-md"
-                        : "bg-white text-slate-600 border border-slate-200 hover:border-purple-200 hover:text-purple-600"
+                        ? "bg-brand-600 text-white shadow-md"
+                        : "bg-white text-slate-600 border border-slate-200 hover:border-brand-200 hover:text-brand-600"
                     }`}
                   >
                     {filter}
@@ -396,17 +392,17 @@ export default function PaymentProviders() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="bg-white p-4 rounded-2xl border border-slate-100 flex flex-col items-center justify-center text-center hover:border-purple-200 hover:shadow-md transition-all h-32 relative group"
+                className="bg-white p-4 rounded-2xl border border-slate-100 flex flex-col items-center justify-center text-center hover:border-brand-200 hover:shadow-md transition-all h-32 relative group"
               >
                 {provider.popular && (
                   <div className="absolute top-2 right-2">
-                    <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-100 border-none text-[10px] px-2 py-0.5">POPULAR</Badge>
+                    <Badge className="bg-brand-100 text-brand-700 hover:bg-brand-100 border-none text-[10px] px-2 py-0.5">POPULAR</Badge>
                   </div>
                 )}
-                <div className="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center text-slate-400 mb-3 group-hover:bg-purple-50 group-hover:text-purple-600 transition-colors overflow-hidden">
+                <div className="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center text-slate-400 mb-3 group-hover:bg-brand-50 group-hover:text-brand-600 transition-colors overflow-hidden">
                   {provider.lucideIcon ? <provider.lucideIcon className="w-5 h-5" /> : <CreditCard className="w-5 h-5" />}
                 </div>
-                <span className="font-bold text-slate-700 text-sm group-hover:text-purple-700 transition-colors">{provider.name}</span>
+                <span className="font-bold text-slate-700 text-sm group-hover:text-brand-700 transition-colors">{provider.name}</span>
               </motion.div>
             ))}
           </div>

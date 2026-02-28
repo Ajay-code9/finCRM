@@ -1,14 +1,10 @@
 import { motion } from "motion/react";
 import { 
   ArrowRight, 
-  LifeBuoy, 
-  MessageSquare, 
   Users, 
   Globe, 
   Shield, 
-  FileText, 
   CheckCircle2, 
-  Zap, 
   Layers, 
   Search, 
   Lock,
@@ -34,21 +30,21 @@ export default function ServiceDesk() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-sm font-medium mb-6">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
                 </span>
                 Customer Support Solution
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-                Service Desk: <span className="text-purple-600">Support Your Customers</span>
+                Service Desk: <span className="text-brand-600">Support Your Customers</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
                 Quickly and easily handle your customer’s enquiries, issues, and requests with a customizable system designed for B2B needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20" onClick={() => setIsDemoDialogOpen(true)}>
+                <Button size="lg" className="gap-2 bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]" onClick={() => setIsDemoDialogOpen(true)}>
                   Request a Demo <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
@@ -76,7 +72,7 @@ export default function ServiceDesk() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-6">
-              Battle-Tested Software Refined Over <span className="text-purple-600">8+ Years</span>
+              Battle-Tested Software Refined Over <span className="text-brand-600">8+ Years</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed">
               We initially developed our Service Desk for our own internal use, and it became indispensable to our operations. That's why we're sharing it with all our B2B clients who need to resolve large volumes of enquiries rapidly and efficiently.
@@ -112,9 +108,9 @@ export default function ServiceDesk() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md hover:border-purple-200 transition-all"
+                className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md hover:border-brand-200 transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 mb-4">
                   <item.icon className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
@@ -134,7 +130,7 @@ export default function ServiceDesk() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-bold uppercase tracking-wider mb-4">
                 Core Functionality
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-6">
@@ -149,7 +145,7 @@ export default function ServiceDesk() {
                   "Securely add important documents or contracts directly to tickets."
                 ].map((item, i) => (
                   <li key={i} className="flex gap-3 items-start">
-                    <CheckCircle2 className="w-5 h-5 text-purple-600 mt-1 shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-brand-600 mt-1 shrink-0" />
                     <p className="text-slate-700 text-lg">{item}</p>
                   </li>
                 ))}
@@ -184,7 +180,7 @@ export default function ServiceDesk() {
               viewport={{ once: true }}
               className="order-1 lg:order-2"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-bold uppercase tracking-wider mb-4">
                 Communication
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-6">
@@ -192,7 +188,7 @@ export default function ServiceDesk() {
               </h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-purple-600 shrink-0 shadow-sm">
+                  <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-brand-600 shrink-0 shadow-sm">
                     <MessageCircle className="w-5 h-5" />
                   </div>
                   <div>
@@ -201,7 +197,7 @@ export default function ServiceDesk() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-purple-600 shrink-0 shadow-sm">
+                  <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-brand-600 shrink-0 shadow-sm">
                     <HelpCircle className="w-5 h-5" />
                   </div>
                   <div>
@@ -210,7 +206,7 @@ export default function ServiceDesk() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-purple-600 shrink-0 shadow-sm">
+                  <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-brand-600 shrink-0 shadow-sm">
                     <Shield className="w-5 h-5" />
                   </div>
                   <div>
@@ -229,7 +225,7 @@ export default function ServiceDesk() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="bg-slate-900 rounded-[2.5rem] p-8 md:p-16 text-white relative overflow-hidden">
             {/* Background Decor */}
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-500/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-600/20 rounded-full blur-[60px] translate-y-1/2 -translate-x-1/2"></div>
 
             <div className="relative z-10 text-center max-w-3xl mx-auto mb-12">
@@ -260,7 +256,7 @@ export default function ServiceDesk() {
                 }
               ].map((item, i) => (
                 <div key={i} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-2xl text-center">
-                  <div className="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 mx-auto mb-6">
+                  <div className="w-14 h-14 rounded-full bg-brand-500/20 flex items-center justify-center text-brand-400 mx-auto mb-6">
                     <item.icon className="w-7 h-7" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">{item.title}</h3>
@@ -283,7 +279,7 @@ export default function ServiceDesk() {
               </h2>
               <Button
                 size="lg"
-                className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20"
+                className="bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]"
                 onClick={() => setIsDemoDialogOpen(true)}
               >
                 Request a Demo
@@ -292,8 +288,8 @@ export default function ServiceDesk() {
             
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-               <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-50" />
-               <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-50" />
+               <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-100 rounded-full blur-3xl opacity-50" />
+               <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-100 rounded-full blur-3xl opacity-50" />
             </div>
           </div>
         </div>

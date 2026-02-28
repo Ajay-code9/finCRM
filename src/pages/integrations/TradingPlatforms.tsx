@@ -1,14 +1,12 @@
 import { motion } from "motion/react";
 import { 
-  ArrowRight, 
   Monitor, 
   Smartphone, 
   Globe, 
   Zap, 
   BarChart2, 
   Layers, 
-  CheckCircle2,
-  ExternalLink
+  CheckCircle2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRequestDemo } from "@/context/RequestDemoContext";
@@ -27,15 +25,15 @@ export default function TradingPlatforms() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-bold mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 text-brand-700 text-sm font-bold mb-8">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
                 </span>
                 3 Premium Integrations Available
               </div>
               <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-                Seamless <span className="text-purple-600">Trading Platform</span> Integrations
+                Seamless <span className="text-brand-600">Trading Platform</span> Integrations
               </h1>
               <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
                 As a premier Forex CRM solution, seamless integration with top-tier trading platforms is our priority. Our system connects effortlessly with industry-standard platforms, rigorously tested to ensure flawless synchronization.
@@ -54,10 +52,10 @@ export default function TradingPlatforms() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="group relative bg-white rounded-[2.5rem] border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col"
+              className="group relative bg-white rounded-[2.5rem] border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all duration-300 flex flex-col"
             >
               <div className="h-48 bg-slate-50 rounded-3xl mb-8 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-emerald-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="w-20 h-20 bg-white rounded-2xl shadow-sm flex items-center justify-center z-10">
                   <Monitor className="w-10 h-10 text-slate-700" />
                 </div>
@@ -71,15 +69,15 @@ export default function TradingPlatforms() {
                 
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-3 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-purple-600" />
+                    <CheckCircle2 className="w-4 h-4 text-brand-600" />
                     <span>Intuitive Interface</span>
                   </li>
                   <li className="flex items-center gap-3 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-purple-600" />
+                    <CheckCircle2 className="w-4 h-4 text-brand-600" />
                     <span>PWA Mobile Technology</span>
                   </li>
                   <li className="flex items-center gap-3 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-purple-600" />
+                    <CheckCircle2 className="w-4 h-4 text-brand-600" />
                     <span>Built-in Copy Trading</span>
                   </li>
                 </ul>
@@ -87,7 +85,7 @@ export default function TradingPlatforms() {
 
               <div className="flex gap-4 mt-auto">
                 <Button
-                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white rounded-xl"
+                  className="flex-1 bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white rounded-xl"
                   onClick={() => setIsDemoDialogOpen(true)}
                 >
                   Get Connected
@@ -104,7 +102,7 @@ export default function TradingPlatforms() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="group relative bg-white rounded-[2.5rem] border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col"
+              className="group relative bg-white rounded-[2.5rem] border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all duration-300 flex flex-col"
             >
               <div className="h-48 bg-slate-50 rounded-3xl mb-8 flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -121,15 +119,15 @@ export default function TradingPlatforms() {
                 
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-3 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-purple-600" />
+                    <CheckCircle2 className="w-4 h-4 text-brand-600" />
                     <span>Industry Standard</span>
                   </li>
                   <li className="flex items-center gap-3 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-purple-600" />
+                    <CheckCircle2 className="w-4 h-4 text-brand-600" />
                     <span>Huge EA Marketplace</span>
                   </li>
                   <li className="flex items-center gap-3 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-purple-600" />
+                    <CheckCircle2 className="w-4 h-4 text-brand-600" />
                     <span>Advanced Charting</span>
                   </li>
                 </ul>
@@ -137,7 +135,7 @@ export default function TradingPlatforms() {
 
               <div className="flex gap-4 mt-auto">
                 <Button
-                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white rounded-xl"
+                  className="flex-1 bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white rounded-xl"
                   onClick={() => setIsDemoDialogOpen(true)}
                 >
                   Get Connected
@@ -154,10 +152,10 @@ export default function TradingPlatforms() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="group relative bg-white rounded-[2.5rem] border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col"
+              className="group relative bg-white rounded-[2.5rem] border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all duration-300 flex flex-col"
             >
               <div className="h-48 bg-slate-50 rounded-3xl mb-8 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-emerald-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="w-20 h-20 bg-white rounded-2xl shadow-sm flex items-center justify-center z-10">
                   <Layers className="w-10 h-10 text-slate-700" />
                 </div>
@@ -171,15 +169,15 @@ export default function TradingPlatforms() {
                 
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-3 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-purple-600" />
+                    <CheckCircle2 className="w-4 h-4 text-brand-600" />
                     <span>Multi-Asset Trading</span>
                   </li>
                   <li className="flex items-center gap-3 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-purple-600" />
+                    <CheckCircle2 className="w-4 h-4 text-brand-600" />
                     <span>More Timeframes</span>
                   </li>
                   <li className="flex items-center gap-3 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-purple-600" />
+                    <CheckCircle2 className="w-4 h-4 text-brand-600" />
                     <span>Built-in Economic Calendar</span>
                   </li>
                 </ul>
@@ -187,7 +185,7 @@ export default function TradingPlatforms() {
 
               <div className="flex gap-4 mt-auto">
                 <Button
-                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white rounded-xl"
+                  className="flex-1 bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white rounded-xl"
                   onClick={() => setIsDemoDialogOpen(true)}
                 >
                   Get Connected
@@ -219,7 +217,7 @@ export default function TradingPlatforms() {
               
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 shrink-0">
                     <Zap className="w-6 h-6" />
                   </div>
                   <div>
@@ -228,7 +226,7 @@ export default function TradingPlatforms() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 shrink-0">
                     <Globe className="w-6 h-6" />
                   </div>
                   <div>
@@ -237,7 +235,7 @@ export default function TradingPlatforms() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 shrink-0">
                     <Smartphone className="w-6 h-6" />
                   </div>
                   <div>
@@ -255,7 +253,7 @@ export default function TradingPlatforms() {
               className="relative"
             >
               <div className="bg-white rounded-[2.5rem] p-8 shadow-xl border border-slate-100">
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-100 rounded-full blur-3xl opacity-50"></div>
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-100 rounded-full blur-3xl opacity-50"></div>
                 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
                 
                 <div className="relative z-10 space-y-4">
@@ -311,7 +309,7 @@ export default function TradingPlatforms() {
               </p>
               <Button
                 size="lg"
-                className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20"
+                className="bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]"
                 onClick={() => setIsDemoDialogOpen(true)}
               >
                 Get Connected Now
@@ -320,7 +318,7 @@ export default function TradingPlatforms() {
             
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-               <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500 rounded-full blur-[100px] opacity-30" />
+               <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-500 rounded-full blur-[100px] opacity-30" />
                <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500 rounded-full blur-[100px] opacity-30" />
             </div>
           </div>

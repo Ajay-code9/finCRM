@@ -181,7 +181,7 @@ export function HomeProductShowcase() {
                   }`}
                 >
                   <div className="relative rounded-3xl bg-slate-900/5 border border-slate-200 shadow-[0_24px_80px_-40px_rgba(15,23,42,0.9)] overflow-hidden">
-                    <div className="absolute inset-0 bg-linear-to-tr from-brand-500/20 via-purple-500/10 to-slate-900/10" />
+                    <div className="absolute inset-0 bg-linear-to-tr from-brand-500/20 via-emerald-500/10 to-slate-900/10" />
                     <div className="relative pt-10 px-6 pb-6 sm:px-8 sm:pb-8">
                       <div className="absolute top-4 left-6 flex items-center gap-1.5">
                         <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />

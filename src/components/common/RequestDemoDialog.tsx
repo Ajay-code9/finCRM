@@ -6,17 +6,12 @@ import { Textarea } from '@/components/ui/textarea';
 import { X } from 'lucide-react';
 import { useRequestDemo } from '@/context/RequestDemoContext';
 
-interface RequestDemoDialogProps {
-  children?: React.ReactNode;
-}
-
-export const RequestDemoDialog: React.FC<RequestDemoDialogProps> = ({ children }) => {
+export const RequestDemoDialog: React.FC = () => {
   const { isDemoDialogOpen, setIsDemoDialogOpen } = useRequestDemo();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log('Demo request submitted');
     setIsDemoDialogOpen(false);
   };
 

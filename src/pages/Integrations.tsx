@@ -173,7 +173,7 @@ export default function Integrations() {
                 <span className="ml-2 text-slate-500 text-xs">bash — 80x24</span>
               </div>
               <div className="text-green-400">
-                <span className="text-purple-400">curl</span> -X POST https://api.fincrm.com/v1/clients \<br/>
+                <span className="text-emerald-400">curl</span> -X POST https://api.fincrm.com/v1/clients \<br/>
                 &nbsp;&nbsp;-H <span className="text-yellow-300">"Authorization: Bearer YOUR_API_KEY"</span> \<br/>
                 &nbsp;&nbsp;-H <span className="text-yellow-300">"Content-Type: application/json"</span> \<br/>
                 &nbsp;&nbsp;-d <span className="text-yellow-300">'{'{'}</span><br/>

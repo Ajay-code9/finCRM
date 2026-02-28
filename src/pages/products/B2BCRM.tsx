@@ -12,10 +12,7 @@ import {
   Send, 
   CheckCircle2,
   Users,
-  Zap,
-  Headphones,
-  Layout,
-  ShieldCheck
+  Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRequestDemo } from "@/context/RequestDemoContext";
@@ -35,21 +32,21 @@ export default function B2BCRM() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-sm font-medium mb-6">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
                 </span>
                 B2B Solutions
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-                The Best <span className="text-purple-600">B2B CRM</span> on the Market
+                The Best <span className="text-brand-600">B2B CRM</span> on the Market
               </h1>
               <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
                 Streamline your internal operations and take your customer service to a new level. Manage customer relations, sales, and data processing with ease.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20" onClick={() => setIsDemoDialogOpen(true)}>
+                <Button size="lg" className="gap-2 bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]" onClick={() => setIsDemoDialogOpen(true)}>
                   Request a Demo <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
@@ -110,7 +107,7 @@ export default function B2BCRM() {
                 transition={{ delay: i * 0.1 }}
                 className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all text-center"
               >
-                <div className="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center text-purple-600 mb-6 mx-auto">
+                <div className="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6 mx-auto">
                   <item.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -172,9 +169,9 @@ export default function B2BCRM() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-start hover:border-purple-200 transition-colors"
+                className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-start hover:border-brand-200 transition-colors"
               >
-                <div className="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6">
                   <item.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -216,20 +213,20 @@ export default function B2BCRM() {
                 <h3 className="text-3xl font-bold text-slate-900 mb-6">Enhance Customer Service</h3>
                 <ul className="space-y-6">
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Create a customer feedback loop to constantly improve your support quality.</p>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Respond to customer queries quickly and efficiently, boosting satisfaction.</p>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Increase sales and improve overall customer retention rates.</p>
                   </li>
@@ -247,20 +244,20 @@ export default function B2BCRM() {
                 <h3 className="text-3xl font-bold text-slate-900 mb-6">Operational Efficiency</h3>
                 <ul className="space-y-6">
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Increase efficiency amongst employees by automating everyday repetitive tasks.</p>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Decrease your IT and development spending budget with our ready-to-use solution.</p>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Manage multiple businesses from one centralized system seamlessly.</p>
                   </li>
@@ -293,19 +290,19 @@ export default function B2BCRM() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)]">
-            {/* Task Management - Large Purple */}
+            {/* Task Management - Large Highlight */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="md:col-span-2 bg-purple-100 rounded-3xl p-8 relative overflow-hidden group"
+              className="md:col-span-2 bg-linear-to-r from-brand-50 via-emerald-50 to-brand-100 rounded-3xl p-8 relative overflow-hidden group border border-brand-100"
             >
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Task Management</h3>
                 <p className="text-slate-700 max-w-md">Create detailed, tailored accesses and permissions for tasks and requests across all your departments and offices worldwide.</p>
               </div>
               <div className="absolute bottom-6 right-6 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
-                <CheckCircle2 className="w-8 h-8 text-purple-600" />
+                <CheckCircle2 className="w-8 h-8 text-brand-600" />
               </div>
             </motion.div>
 
@@ -328,59 +325,59 @@ export default function B2BCRM() {
               </div>
             </motion.div>
 
-            {/* Centralized - Purple */}
+            {/* Centralized */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-purple-100 rounded-3xl p-8 relative"
+              className="bg-brand-50 rounded-3xl p-8 relative border border-brand-100"
             >
               <h3 className="text-xl font-bold text-slate-900 mb-3">Centralized</h3>
               <p className="text-slate-600 text-sm">Manage multiple businesses from one centralized system.</p>
             </motion.div>
 
-            {/* Support - Purple */}
+            {/* Support */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="bg-purple-100 rounded-3xl p-8 relative"
+              className="bg-brand-50 rounded-3xl p-8 relative border border-brand-100"
             >
               <h3 className="text-xl font-bold text-slate-900 mb-3">Support</h3>
               <p className="text-slate-600 text-sm">Create a customer feedback loop to improve customer support.</p>
             </motion.div>
 
-            {/* Overview - Purple */}
+            {/* Overview */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="bg-purple-100 rounded-3xl p-8 relative"
+              className="bg-brand-50 rounded-3xl p-8 relative border border-brand-100"
             >
               <h3 className="text-xl font-bold text-slate-900 mb-3">Full Overview</h3>
               <p className="text-slate-600 text-sm">Gain a full overview of your client base and benefit from excellent reporting tools.</p>
             </motion.div>
 
-            {/* Satisfaction - Large Purple */}
+            {/* Satisfaction - Large */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="md:col-span-2 bg-purple-100 rounded-3xl p-8 relative"
+              className="md:col-span-2 bg-linear-to-r from-brand-50 via-emerald-50 to-brand-100 rounded-3xl p-8 relative border border-brand-100"
             >
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Satisfaction</h3>
                 <p className="text-slate-700 max-w-md">Keep employees and clients happier by running your business more smoothly in general.</p>
-                <div className="mt-6 inline-block px-4 py-2 bg-white/50 rounded-full text-purple-800 font-bold text-sm">
+                <div className="mt-6 inline-block px-4 py-2 bg-white/50 rounded-full text-brand-800 font-bold text-sm">
                   Improved Relationships
                 </div>
               </div>
               <div className="absolute bottom-6 right-6 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
-                <Users className="w-8 h-8 text-purple-600" />
+                <Users className="w-8 h-8 text-brand-600" />
               </div>
             </motion.div>
           </div>
@@ -398,7 +395,7 @@ export default function B2BCRM() {
               </h2>
               <Button
                 size="lg"
-                className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20"
+                className="bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]"
                 onClick={() => setIsDemoDialogOpen(true)}
               >
                 Request a Demo
@@ -407,8 +404,8 @@ export default function B2BCRM() {
             
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-               <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-50" />
-               <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-50" />
+               <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-100 rounded-full blur-3xl opacity-50" />
+               <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-100 rounded-full blur-3xl opacity-50" />
             </div>
           </div>
         </div>

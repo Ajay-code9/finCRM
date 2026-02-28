@@ -31,21 +31,25 @@ export default function PartnerArea() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-sm font-medium mb-6">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
                 </span>
                 Partner Area
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-                Empower Your <span className="text-purple-600">IB Partners</span>
+                Empower Your <span className="text-brand-600">IB Partners</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
                 Equip your Introducing Brokers with the tools they need to generate business and massively expand your brokerage's reach.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20" onClick={() => setIsDemoDialogOpen(true)}>
+                <Button
+                  size="lg"
+                  className="gap-2 bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]"
+                  onClick={() => setIsDemoDialogOpen(true)}
+                >
                   Request a Demo <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
@@ -78,7 +82,7 @@ export default function PartnerArea() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-6">
-                Support your IBs, <span className="text-purple-600">Elevate your Business</span>
+                Support your IBs, <span className="text-brand-600">Elevate your Business</span>
               </h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
                 While competitive commissions and good relationships are standard, true growth comes from equipping partners with the right tools.
@@ -94,7 +98,7 @@ export default function PartnerArea() {
                   "Transparent commission visibility"
                 ].map((item, i) => (
                   <li key={i} className="flex gap-3 items-start">
-                    <CheckCircle2 className="w-5 h-5 text-purple-600 mt-1 shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-brand-600 mt-1 shrink-0" />
                     <p className="text-slate-700">{item}</p>
                   </li>
                 ))}
@@ -155,10 +159,10 @@ export default function PartnerArea() {
                 transition={{ delay: i * 0.2 }}
                 className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center text-center relative overflow-hidden group"
               >
-                <div className="absolute top-0 right-0 bg-purple-100 w-16 h-16 rounded-bl-3xl flex items-center justify-center text-purple-600 font-bold text-xl">
+                <div className="absolute top-0 right-0 bg-brand-50 w-16 h-16 rounded-bl-3xl flex items-center justify-center text-brand-600 font-bold text-xl">
                   {item.step}
                 </div>
-                <div className="w-16 h-16 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600 mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                <div className="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
                   <item.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{item.title}</h3>
@@ -174,7 +178,7 @@ export default function PartnerArea() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-4">
-              The Ultimate <span className="text-purple-600">IB Toolkit</span>
+              The Ultimate <span className="text-brand-600">IB Toolkit</span>
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Offer your partners an incredibly powerful tool, allowing them to grow their business and find new clients.
@@ -198,9 +202,9 @@ export default function PartnerArea() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md hover:border-purple-200 transition-all"
+                className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md hover:border-brand-200 transition-all"
               >
-                <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-brand-50 flex items-center justify-center text-brand-600 mb-4">
                   <item.icon className="w-5 h-5" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
@@ -214,7 +218,7 @@ export default function PartnerArea() {
       {/* Benefits Section */}
       <section className="py-20 bg-slate-900 text-white overflow-hidden relative">
         {/* Background Decor */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-600/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
         <MolecularParticles />
 
@@ -251,7 +255,7 @@ export default function PartnerArea() {
                     transition={{ delay: i * 0.1 }}
                     className="flex gap-4"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 text-purple-400">
+                    <div className="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 text-emerald-300">
                       <CheckCircle2 className="w-6 h-6" />
                     </div>
                     <div>
@@ -263,7 +267,7 @@ export default function PartnerArea() {
               </div>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/30 to-transparent rounded-3xl transform rotate-3"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-brand-500/30 to-transparent rounded-3xl transform rotate-3"></div>
               <img 
                 src="/images/partnerarea3.jpg" 
                 alt="Partner Benefits" 
@@ -282,15 +286,19 @@ export default function PartnerArea() {
               <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-8">
                 Ready to transform your brokerage operations?
               </h2>
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20" onClick={() => setIsDemoDialogOpen(true)}>
+              <Button
+                size="lg"
+                className="bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]"
+                onClick={() => setIsDemoDialogOpen(true)}
+              >
                 Request a Demo
               </Button>
             </div>
             
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-               <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-50" />
-               <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-50" />
+               <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-100 rounded-full blur-3xl opacity-50" />
+               <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-100 rounded-full blur-3xl opacity-50" />
             </div>
           </div>
         </div>

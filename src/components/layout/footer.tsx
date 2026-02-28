@@ -13,11 +13,11 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-4">
+            <Link to="/" className="inline-flex items-center gap-2 mb-4">
               <img
-                src="/logo/FinCRM-logo-white.svg"
+                src="/logo/finallogofincrm-white.svg"
                 alt="FinCRM"
-                className="h-8 w-auto object-contain"
+                className="h-9 md:h-10 w-auto object-contain"
               />
             </Link>
             <p className="text-sm leading-relaxed max-w-xs mb-6">

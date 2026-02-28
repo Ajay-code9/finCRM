@@ -111,14 +111,14 @@ export function Hero() {
                 className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl border border-slate-100 shadow-(--shadow-card-hover) max-w-[200px] hidden md:block transition-shadow duration-200 hover:shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1)]"
               >
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">$</div>
+                  <div className="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600">$</div>
                   <div>
                     <div className="text-xs text-slate-500">Total Revenue</div>
                     <div className="text-sm font-bold text-slate-900">$124,500</div>
                   </div>
                 </div>
                 <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-purple-500 h-full w-[75%]" />
+                  <div className="bg-brand-500 h-full w-[75%]" />
                 </div>
               </motion.div>
 

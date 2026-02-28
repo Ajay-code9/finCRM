@@ -8,13 +8,11 @@ import {
   Wallet, 
   MessageSquare, 
   Smartphone,
-  Globe,
   CheckCircle2,
   Layers,
   Code
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { useRequestDemo } from "@/context/RequestDemoContext";
 import { SectionParticles } from "@/components/common/SectionParticles";
 
@@ -32,15 +30,15 @@ export default function ClientArea() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-sm font-medium mb-6">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
                 </span>
                 Next-Gen Client Portal
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-                The Ultimate <span className="text-purple-600">Client Experience</span>
+                The Ultimate <span className="text-brand-600">Client Experience</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
                 Serve your clients with an intuitive, secure, and fully customizable portal. Deliver a professional interface that builds trust and simplifies operations 24/7.
@@ -48,7 +46,7 @@ export default function ClientArea() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="gap-2 bg-purple-600 hover:bg-purple-700 text-white"
+                  className="gap-2 bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white"
                   onClick={() => setIsDemoDialogOpen(true)}
                 >
                   Request a Demo <ArrowRight className="w-4 h-4" />
@@ -61,11 +59,11 @@ export default function ClientArea() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative"
             >
-              <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
+              <div className="rounded-2xl overflow-hidden">
                 <img 
-                  src="/images/clientarea5.jpg" 
+                  src="/images/clientarea5.png"
                   alt="Client Area Dashboard" 
-                  className="w-full h-auto"
+                  className="w-full h-auto block"
                 />
               </div>
             </motion.div>
@@ -111,7 +109,7 @@ export default function ClientArea() {
                 transition={{ delay: i * 0.1 }}
                 className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all text-center"
               >
-                <div className="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center text-purple-600 mb-6 mx-auto">
+                <div className="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6 mx-auto">
                   <item.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -150,7 +148,7 @@ export default function ClientArea() {
                 viewport={{ once: true }}
                 className="order-1 lg:order-2"
               >
-                <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6">
                   <Zap className="w-6 h-6" />
                 </div>
                 <h3 className="text-3xl font-bold text-slate-900 mb-6">Automation & Acceleration</h3>
@@ -162,7 +160,7 @@ export default function ClientArea() {
                     "Easy access to essential client reports"
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-purple-600 mt-1 shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-brand-600 mt-1 shrink-0" />
                       <p className="text-slate-600 text-lg">{item}</p>
                     </li>
                   ))}
@@ -177,7 +175,7 @@ export default function ClientArea() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6">
                   <UserPlus className="w-6 h-6" />
                 </div>
                 <h3 className="text-3xl font-bold text-slate-900 mb-6">Intuitive Onboarding</h3>
@@ -189,7 +187,7 @@ export default function ClientArea() {
                     "Automatic scoring logic with variable outcomes"
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-purple-600 mt-1 shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-brand-600 mt-1 shrink-0" />
                       <p className="text-slate-600 text-lg">{item}</p>
                     </li>
                   ))}
@@ -224,7 +222,7 @@ export default function ClientArea() {
                 viewport={{ once: true }}
                 className="order-1 lg:order-2"
               >
-                <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6">
                   <Wallet className="w-6 h-6" />
                 </div>
                 <h3 className="text-3xl font-bold text-slate-900 mb-6">Account & Funds Workflow</h3>
@@ -236,7 +234,7 @@ export default function ClientArea() {
                     "Downloadable transaction history and statements"
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-purple-600 mt-1 shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-brand-600 mt-1 shrink-0" />
                       <p className="text-slate-600 text-lg">{item}</p>
                     </li>
                   ))}
@@ -251,7 +249,7 @@ export default function ClientArea() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6">
                   <MessageSquare className="w-6 h-6" />
                 </div>
                 <h3 className="text-3xl font-bold text-slate-900 mb-6">Support & Marketing Tools</h3>
@@ -263,7 +261,7 @@ export default function ClientArea() {
                     "Marketing tools: banners, links, and statistics"
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 items-start">
-                      <CheckCircle2 className="w-5 h-5 text-purple-600 mt-1 shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-brand-600 mt-1 shrink-0" />
                       <p className="text-slate-600 text-lg">{item}</p>
                     </li>
                   ))}
@@ -296,19 +294,19 @@ export default function ClientArea() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)]">
-            {/* Industry Leading - Large Purple */}
+            {/* Industry Leading - Large */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="md:col-span-2 bg-purple-50 rounded-3xl p-8 relative overflow-hidden group border border-purple-100"
+              className="md:col-span-2 bg-linear-to-r from-brand-50 via-emerald-50 to-brand-100 rounded-3xl p-8 relative overflow-hidden group border border-brand-100"
             >
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Industry Leading</h3>
                 <p className="text-slate-700 max-w-md">We continuously innovate, creating tools and features that ensure our CRM and Client Area remain at the forefront of the industry.</p>
               </div>
-              <div className="absolute bottom-6 right-6 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
-                <Layers className="w-8 h-8 text-purple-600" />
+                <div className="absolute bottom-6 right-6 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
+                  <Layers className="w-8 h-8 text-brand-600" />
               </div>
             </motion.div>
 
@@ -331,61 +329,61 @@ export default function ClientArea() {
               </div>
             </motion.div>
 
-            {/* Flexibility - Purple */}
+            {/* Flexibility */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-purple-50 rounded-3xl p-8 relative border border-purple-100"
+              className="bg-brand-50 rounded-3xl p-8 relative border border-brand-100"
             >
               <h3 className="text-xl font-bold text-slate-900 mb-3">Flexibility</h3>
               <p className="text-slate-600 text-sm">Customizable from the ground up. Integrates seamlessly with a huge variety of third-party solutions.</p>
             </motion.div>
 
-            {/* Personal Touch - Purple */}
+            {/* Personal Touch */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="bg-purple-50 rounded-3xl p-8 relative border border-purple-100"
+              className="bg-brand-50 rounded-3xl p-8 relative border border-brand-100"
             >
               <h3 className="text-xl font-bold text-slate-900 mb-3">Personal Touch</h3>
               <p className="text-slate-600 text-sm">Every element can be customized to fit your company's unique branding and color scheme.</p>
             </motion.div>
 
-            {/* Unrivalled Support - Purple */}
+            {/* Unrivalled Support */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="bg-purple-50 rounded-3xl p-8 relative border border-purple-100"
+              className="bg-brand-50 rounded-3xl p-8 relative border border-brand-100"
             >
               <h3 className="text-xl font-bold text-slate-900 mb-3">Unrivalled Support</h3>
               <p className="text-slate-600 text-sm">Our experienced development teams offer clever, customized solutions delivered fast.</p>
             </motion.div>
 
-             {/* Mobile App Promo - Large Purple */}
+             {/* Mobile App Promo - Large */}
              <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="md:col-span-2 bg-purple-600 rounded-3xl p-8 relative overflow-hidden text-white"
+              className="md:col-span-2 bg-linear-to-r from-brand-700 via-brand-600 to-emerald-500 rounded-3xl p-8 relative overflow-hidden text-white"
             >
               <div className="relative z-10 max-w-md">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/50 text-white text-xs font-medium mb-4 border border-purple-400">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-medium mb-4 border border-emerald-200/60">
                   <Smartphone className="w-3 h-3" /> Mobile App
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Work on the go</h3>
-                <p className="text-purple-100 mb-6">Get seamless access on the go with our Client Area mobile app. Always available, anytime, anywhere. Stay connected effortlessly!</p>
+                <p className="text-emerald-100 mb-6">Get seamless access on the go with our Client Area mobile app. Always available, anytime, anywhere. Stay connected effortlessly!</p>
                 <Button variant="secondary" className="gap-2">
                   Learn More <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-purple-500 rounded-full opacity-50 blur-3xl"></div>
+              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-emerald-500 rounded-full opacity-50 blur-3xl"></div>
             </motion.div>
           </div>
         </div>
@@ -402,7 +400,7 @@ export default function ClientArea() {
               </h2>
               <Button
                 size="lg"
-                className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20"
+                className="bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]"
                 onClick={() => setIsDemoDialogOpen(true)}
               >
                 Request a Demo
@@ -411,8 +409,8 @@ export default function ClientArea() {
             
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-               <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-50" />
-               <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-50" />
+               <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-100 rounded-full blur-3xl opacity-50" />
+               <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-100 rounded-full blur-3xl opacity-50" />
             </div>
           </div>
         </div>

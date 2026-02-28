@@ -5,7 +5,6 @@ import {
   Coins, 
   Users, 
   TrendingUp, 
-  Gift, 
   ShieldCheck, 
   Zap, 
   Crown, 
@@ -30,21 +29,25 @@ export default function LoyaltyProgram() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-sm font-medium mb-6">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
                 </span>
                 Retention Engine
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-                Next-Gen <span className="text-purple-600">Tiered Loyalty</span> System
+                Next-Gen <span className="text-brand-600">Tiered Loyalty</span> System
               </h1>
               <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
                 Empower your traders, incentivize success, and drive revenue with our cutting-edge rewards ecosystem. Turn trading activity into tangible value.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gap-2 bg-purple-600 hover:bg-purple-700 text-white shadow-lg shadow-purple-500/20" onClick={() => setIsDemoDialogOpen(true)}>
+                <Button
+                  size="lg"
+                  className="gap-2 bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]"
+                  onClick={() => setIsDemoDialogOpen(true)}
+                >
                   Request a Demo <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
@@ -83,8 +86,8 @@ export default function LoyaltyProgram() {
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-purple-50 p-6 rounded-2xl border border-purple-100">
-                <Trophy className="w-10 h-10 text-purple-600 mb-4" />
+              <div className="bg-brand-50 p-6 rounded-2xl border border-brand-100">
+                <Trophy className="w-10 h-10 text-brand-600 mb-4" />
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Gamified Growth</h3>
                 <p className="text-slate-600">Turn trading into a game where progress is rewarded.</p>
               </div>
@@ -120,7 +123,7 @@ export default function LoyaltyProgram() {
                 title: "Brokerages",
                 icon: TrendingUp,
                 desc: "Acquire and retain with ease. Deploy a transparent reward loop that slashes churn and boosts lifetime value significantly.",
-                color: "bg-purple-50 text-purple-600"
+                color: "bg-brand-50 text-brand-600"
               },
               {
                 title: "IBs",
@@ -190,7 +193,7 @@ export default function LoyaltyProgram() {
                   transition={{ delay: i * 0.2 }}
                   className="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg text-center relative group hover:-translate-y-2 transition-transform duration-300"
                 >
-                  <div className="w-16 h-16 mx-auto bg-purple-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg shadow-purple-500/30">
+                  <div className="w-16 h-16 mx-auto bg-brand-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]">
                     {item.step}
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-4">{item.title}</h3>
@@ -250,9 +253,9 @@ export default function LoyaltyProgram() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="flex items-start gap-4 p-6 bg-white rounded-2xl border border-slate-100 hover:border-purple-200 transition-colors"
+                className="flex items-start gap-4 p-6 bg-white rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors"
               >
-                <div className="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
                   <item.icon className="w-5 h-5" />
                 </div>
                 <div>
@@ -273,14 +276,18 @@ export default function LoyaltyProgram() {
               <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-8">
                 Ready to revolutionize your retention strategy?
               </h2>
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20" onClick={() => setIsDemoDialogOpen(true)}>
+              <Button
+                size="lg"
+                className="bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]"
+                onClick={() => setIsDemoDialogOpen(true)}
+              >
                 Request a Demo
               </Button>
             </div>
             
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-               <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500 rounded-full blur-[100px] opacity-30" />
+               <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-500 rounded-full blur-[100px] opacity-30" />
                <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500 rounded-full blur-[100px] opacity-30" />
             </div>
           </div>

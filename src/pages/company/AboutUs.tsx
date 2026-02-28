@@ -1,6 +1,4 @@
 import { motion } from "motion/react";
-import { Users, Target, Award, Briefcase, Mail, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const stats = [
   { value: "10+", label: "years of proven forex experience" },
@@ -31,7 +29,7 @@ export default function AboutUs() {
   return (
     <div className="pt-20 bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-24 bg-slate-50 overflow-hidden min-h-[calc(100vh-5rem)] flex items-center">
+      <section className="relative py-12 lg:py-16 bg-slate-50 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -57,7 +55,7 @@ export default function AboutUs() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative flex items-center justify-center"
             >
-              <div className="absolute w-full h-full bg-purple-400 rounded-full blur-3xl opacity-20"></div>
+              <div className="absolute w-full h-full bg-linear-to-tr from-brand-500/50 via-emerald-400/40 to-brand-300/40 rounded-full blur-3xl opacity-80"></div>
               <img src="/images/aboutus.jpg" alt="Abstract purple graphic" className="relative w-full max-w-md rounded-full" />
             </motion.div>
           </div>
@@ -94,7 +92,7 @@ export default function AboutUs() {
       </section>
 
       {/* Value Prop Banner */}
-      <section className="py-16 bg-purple-600 text-white">
+      <section className="py-16 bg-linear-to-r from-brand-700 via-brand-600 to-emerald-500 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +127,7 @@ export default function AboutUs() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <div className="text-5xl font-display font-bold text-purple-600 mb-2">{stat.value}</div>
+                <div className="text-5xl font-display font-bold text-brand-600 mb-2">{stat.value}</div>
                 <p className="text-slate-500 text-sm">{stat.label}</p>
               </motion.div>
             ))}

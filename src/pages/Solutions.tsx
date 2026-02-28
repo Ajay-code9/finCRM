@@ -116,7 +116,7 @@ export default function Solutions() {
                 </div>
                 <div className="flex-1 w-full">
                   <div className="aspect-video rounded-2xl bg-slate-100 border border-slate-200 shadow-xl overflow-hidden relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-brand-500/5 to-purple-500/5 group-hover:opacity-0 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-brand-500/5 to-emerald-500/5 group-hover:opacity-0 transition-opacity" />
                     <img 
                       src={`https://picsum.photos/seed/${index}/800/600`} 
                       alt={solution.title}
@@ -143,21 +143,21 @@ export default function Solutions() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 rounded-2xl bg-slate-800 border border-slate-700 shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:-translate-y-1 transition-all duration-300 ease-out">
-              <Zap className="w-10 h-10 text-purple-400 mb-6" />
+              <Zap className="w-10 h-10 text-emerald-400 mb-6" />
               <h3 className="text-xl font-bold mb-3">Low Latency</h3>
               <p className="text-slate-400">
                 Optimized for high-frequency trading environments with sub-millisecond execution times.
               </p>
             </div>
             <div className="p-8 rounded-2xl bg-slate-800 border border-slate-700 shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:-translate-y-1 transition-all duration-300 ease-out">
-              <Shield className="w-10 h-10 text-purple-400 mb-6" />
+              <Shield className="w-10 h-10 text-emerald-400 mb-6" />
               <h3 className="text-xl font-bold mb-3">Bank-Grade Security</h3>
               <p className="text-slate-400">
                 ISO 27001 certified infrastructure with DDoS protection and end-to-end encryption.
               </p>
             </div>
             <div className="p-8 rounded-2xl bg-slate-800 border border-slate-700 shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) hover:-translate-y-1 transition-all duration-300 ease-out">
-              <Server className="w-10 h-10 text-purple-400 mb-6" />
+              <Server className="w-10 h-10 text-emerald-400 mb-6" />
               <h3 className="text-xl font-bold mb-3">99.99% Uptime</h3>
               <p className="text-slate-400">
                 Redundant server clusters across multiple geographic regions ensure your business never stops.

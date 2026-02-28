@@ -9,15 +9,9 @@ import {
   Globe,
   Code,
   FileText,
-  Mail,
-  Shield,
-  BarChart3,
-  Layers,
-  Headphones,
   Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CTA } from "@/components/sections/cta";
 import { FeatureCard } from "@/components/cards/FeatureCard";
 import { useRequestDemo } from "@/context/RequestDemoContext";
 import { SectionParticles } from "@/components/common/SectionParticles";
@@ -188,9 +182,9 @@ export default function BackOffice() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-purple-500/50 transition-colors"
+              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-emerald-400/60 transition-colors"
             >
-              <div className="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 mb-6">
+              <div className="w-14 h-14 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-100 mb-6">
                 <Users className="w-7 h-7" />
               </div>
               <h3 className="text-2xl font-bold mb-6">Client Management</h3>
@@ -203,7 +197,7 @@ export default function BackOffice() {
                   "Targeted mass email marketing campaigns"
                 ].map((feat, i) => (
                   <li key={i} className="flex items-start gap-3 text-slate-300">
-                    <CheckCircle2 className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-emerald-300 shrink-0 mt-0.5" />
                     <span>{feat}</span>
                   </li>
                 ))}
@@ -216,9 +210,9 @@ export default function BackOffice() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-purple-500/50 transition-colors"
+              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-emerald-400/60 transition-colors"
             >
-              <div className="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 mb-6">
+              <div className="w-14 h-14 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-100 mb-6">
                 <FileText className="w-7 h-7" />
               </div>
               <h3 className="text-2xl font-bold mb-6">Document Control</h3>
@@ -231,7 +225,7 @@ export default function BackOffice() {
                   "GDPR & regulatory compliance tools"
                 ].map((feat, i) => (
                   <li key={i} className="flex items-start gap-3 text-slate-300">
-                    <CheckCircle2 className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-emerald-300 shrink-0 mt-0.5" />
                     <span>{feat}</span>
                   </li>
                 ))}
@@ -244,9 +238,9 @@ export default function BackOffice() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-purple-500/50 transition-colors"
+              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-emerald-400/60 transition-colors"
             >
-              <div className="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 mb-6">
+              <div className="w-14 h-14 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-100 mb-6">
                 <Zap className="w-7 h-7" />
               </div>
               <h3 className="text-2xl font-bold mb-6">Smart Automation</h3>
@@ -259,7 +253,7 @@ export default function BackOffice() {
                   "Cross-departmental task & access management"
                 ].map((feat, i) => (
                   <li key={i} className="flex items-start gap-3 text-slate-300">
-                    <CheckCircle2 className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-emerald-300 shrink-0 mt-0.5" />
                     <span>{feat}</span>
                   </li>
                 ))}

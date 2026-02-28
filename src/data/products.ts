@@ -5,12 +5,7 @@ import {
   Smartphone, 
   Handshake, 
   Briefcase, 
-  Headphones,
-  BarChart3,
-  Globe,
-  Shield,
-  Zap,
-  CheckCircle2
+  Headphones
 } from "lucide-react";
 
 export const products = {

@@ -20,7 +20,7 @@ export function HomeLoyaltySecurity() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={transition}
-            className="relative rounded-3xl bg-linear-to-br from-purple-600 via-purple-500 to-fuchsia-500 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.9)] overflow-hidden"
+            className="relative rounded-3xl bg-linear-to-br from-brand-700 via-brand-600 to-emerald-500 shadow-[0_32px_90px_-40px_rgba(15,23,42,0.9)] overflow-hidden"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.28),transparent_55%),radial-gradient(circle_at_bottom_right,rgba(129,140,248,0.35),transparent_60%)] opacity-80" />
             <div className="relative p-8 sm:p-10 lg:p-12">
@@ -30,7 +30,7 @@ export function HomeLoyaltySecurity() {
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
                 Next‑Gen Tiered Loyalty System
               </h2>
-              <p className="text-sm md:text-base text-purple-100 max-w-xl mb-6">
+              <p className="text-sm md:text-base text-emerald-100 max-w-xl mb-6">
                 Empower your traders, incentivize success, and drive revenue with our cutting-edge rewards ecosystem. Turn trading activity into tangible value.
               </p>
               <div className="grid sm:grid-cols-2 gap-5 mb-7">
@@ -40,7 +40,7 @@ export function HomeLoyaltySecurity() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm md:text-base">Gamified Growth</h3>
-                    <p className="text-xs md:text-sm text-purple-100/90">
+                    <p className="text-xs md:text-sm text-emerald-100/90">
                       Turn trading into a game where every position helps clients climb tiers and unlock better perks.
                     </p>
                   </div>
@@ -51,7 +51,7 @@ export function HomeLoyaltySecurity() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm md:text-base">Real Value</h3>
-                    <p className="text-xs md:text-sm text-purple-100/90">
+                    <p className="text-xs md:text-sm text-emerald-100/90">
                       Points convert to withdrawable cash or crypto, aligned with your brokerage rules.
                     </p>
                   </div>
@@ -59,16 +59,16 @@ export function HomeLoyaltySecurity() {
               </div>
               <div className="flex flex-wrap gap-4 items-center">
                 <Button
-                  size="lg"
-                  className="bg-white text-purple-700 hover:bg-purple-50 font-semibold shadow-[0_16px_40px_-24px_rgba(15,23,42,0.95)]"
-                  onClick={() => setIsDemoDialogOpen(true)}
+                size="lg"
+                className="bg-white text-brand-700 hover:bg-brand-50 font-semibold shadow-[0_16px_40px_-24px_rgba(15,23,42,0.95)]"
+                onClick={() => setIsDemoDialogOpen(true)}
                 >
                   Request a Loyalty Demo
                 </Button>
                 <button
                   type="button"
                   onClick={() => navigate("/features/loyalty-program")}
-                  className="text-sm font-semibold text-purple-50 hover:text-white inline-flex items-center gap-1.5"
+                  className="text-sm font-semibold text-emerald-50 hover:text-white inline-flex items-center gap-1.5"
                 >
                   View full loyalty program
                   <span aria-hidden>→</span>

@@ -4,15 +4,8 @@ import {
   Trophy, 
   Target, 
   TrendingUp, 
-  Settings, 
-  ShieldAlert, 
-  BarChart2, 
-  Layers, 
-  Users,
   Code,
   Zap,
-  Headphones,
-  Maximize,
   CheckCircle2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -31,21 +24,21 @@ export default function PropTradingCRM() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-sm font-medium mb-6">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
                 </span>
                 Prop Trading Solution
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-tight mb-6">
-                Launch Your Own <span className="text-purple-600">Prop Trading Firm</span>
+                Launch Your Own <span className="text-brand-600">Prop Trading Firm</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
                 Set up multi-step challenges, manage clients with ease, and offer an innovative funding system. Revolutionize the way you do business with our turnkey solution.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gap-2 bg-purple-600 hover:bg-purple-700 text-white" onClick={() => setIsDemoDialogOpen(true)}>
+                <Button size="lg" className="gap-2 bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white" onClick={() => setIsDemoDialogOpen(true)}>
                   Request a Demo <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
@@ -106,7 +99,7 @@ export default function PropTradingCRM() {
                 transition={{ delay: i * 0.1 }}
                 className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all text-center"
               >
-                <div className="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center text-purple-600 mb-6 mx-auto">
+                <div className="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6 mx-auto">
                   <item.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -200,20 +193,20 @@ export default function PropTradingCRM() {
                 <h3 className="text-3xl font-bold text-slate-900 mb-6">Centralized Management</h3>
                 <ul className="space-y-6">
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Effortlessly manage traders, profiles, and trading activities in one powerful, centralized dashboard.</p>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Keep a close eye on trader performance, oversee accounts, and optimize trading strategies with ease.</p>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Elevate your business with streamlined management solutions designed for growth.</p>
                   </li>
@@ -231,20 +224,20 @@ export default function PropTradingCRM() {
                 <h3 className="text-3xl font-bold text-slate-900 mb-6">Advanced Risk Management</h3>
                 <ul className="space-y-6">
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Equip your firm with cutting-edge risk management tools. Monitor risk parameters across all challenges in real-time.</p>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Seamlessly set flexible thresholds and 'read only' status for accounts that fail specified objectives.</p>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Instantly access detailed reports on trading activity, profitability, and risk exposure.</p>
                   </li>
@@ -282,20 +275,20 @@ export default function PropTradingCRM() {
                 <h3 className="text-3xl font-bold text-slate-900 mb-6">Seamless Integration</h3>
                 <ul className="space-y-6">
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Integrates with leading trading platforms like MetaTrader, cTrader, and more.</p>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Enjoy smooth data flow and synchronization that minimizes operational hassles.</p>
                   </li>
                   <li className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full border-2 border-purple-500 flex items-center justify-center mt-1 shrink-0">
-                      <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+                    <div className="w-6 h-6 rounded-full border-2 border-brand-500 flex items-center justify-center mt-1 shrink-0">
+                      <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                     </div>
                     <p className="text-slate-600 text-lg">Supports multi-currency accounts, flexible leverage options, and seamless onboarding.</p>
                   </li>
@@ -319,19 +312,19 @@ export default function PropTradingCRM() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)]">
-            {/* Automation - Large Purple */}
+            {/* Automation - Large Card */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="md:col-span-2 bg-purple-100 rounded-3xl p-8 relative overflow-hidden group"
+              className="md:col-span-2 bg-linear-to-r from-brand-50 via-emerald-50 to-brand-100 rounded-3xl p-8 relative overflow-hidden group"
             >
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Automation</h3>
                 <p className="text-slate-700 max-w-md">Automate challenges effortlessly to save up on time and money. Streamline your entire workflow.</p>
               </div>
               <div className="absolute bottom-6 right-6 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
-                <Zap className="w-8 h-8 text-purple-600" />
+                <Zap className="w-8 h-8 text-brand-600" />
               </div>
             </motion.div>
 
@@ -354,59 +347,59 @@ export default function PropTradingCRM() {
               </div>
             </motion.div>
 
-            {/* Scalability - Purple */}
+            {/* Scalability */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-purple-100 rounded-3xl p-8 relative"
+              className="bg-brand-50 rounded-3xl p-8 relative"
             >
               <h3 className="text-xl font-bold text-slate-900 mb-3">Scalability</h3>
               <p className="text-slate-600 text-sm">Access a wide range of tools and integrations, scalable to your prop trading challenges.</p>
             </motion.div>
 
-            {/* Support - Purple */}
+            {/* Support */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="bg-purple-100 rounded-3xl p-8 relative"
+              className="bg-brand-50 rounded-3xl p-8 relative"
             >
               <h3 className="text-xl font-bold text-slate-900 mb-3">Support</h3>
               <p className="text-slate-600 text-sm">Technical support 24/5 and emergency support 24/7.</p>
             </motion.div>
 
-            {/* Flexibility - Purple */}
+            {/* Flexibility */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="bg-purple-100 rounded-3xl p-8 relative"
+              className="bg-brand-50 rounded-3xl p-8 relative"
             >
               <h3 className="text-xl font-bold text-slate-900 mb-3">Flexibility</h3>
               <p className="text-slate-600 text-sm">Customizable to build your challenges exactly how you envision them.</p>
             </motion.div>
 
-            {/* Stability - Large Purple */}
+            {/* Stability - Large */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="md:col-span-2 bg-purple-100 rounded-3xl p-8 relative"
+              className="md:col-span-2 bg-brand-50 rounded-3xl p-8 relative"
             >
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Stability</h3>
                 <p className="text-slate-700 max-w-md">A trusted name in the industry, FinCRM Prop Trading is one of the longest-standing and most advanced solutions.</p>
-                <div className="mt-6 inline-block px-4 py-2 bg-white/50 rounded-full text-purple-800 font-bold text-sm">
+                <div className="mt-6 inline-block px-4 py-2 bg-white/50 rounded-full text-brand-800 font-bold text-sm">
                   15+ Years Expertise
                 </div>
               </div>
               <div className="absolute bottom-6 right-6 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
-                <CheckCircle2 className="w-8 h-8 text-purple-600" />
+                <CheckCircle2 className="w-8 h-8 text-brand-600" />
               </div>
             </motion.div>
           </div>
@@ -421,7 +414,7 @@ export default function PropTradingCRM() {
               <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-8">
                 Ready to elevate your prop trading operations?
               </h2>
-              <Button size="lg" className="bg-purple-500 hover:bg-purple-600 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-purple-500/20" onClick={() => setIsDemoDialogOpen(true)}>
+              <Button size="lg" className="bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white text-lg px-8 py-6 h-auto rounded-xl shadow-lg shadow-[0_18px_45px_-20px_rgba(16,185,129,0.9)]" onClick={() => setIsDemoDialogOpen(true)}>
                 Request a Demo
               </Button>
             </div>

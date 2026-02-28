@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, Calendar, User } from "lucide-react";
+import { Calendar, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const blogPosts = [
@@ -17,13 +17,6 @@ const blogPosts = [
     date: "July 22, 2024",
     image: "/images/blog2.jpg"
   },
-  { 
-    title: "Understanding the Importance of ISO 27001:2022", 
-    excerpt: "Learn why ISO 27001:2022 certification is crucial for ensuring the security and integrity of your data.", 
-    author: "Peter Jones", 
-    date: "July 18, 2024",
-     image: "/images/blog3.jpg"
-  },
 ];
 
 export default function Blog() {
@@ -31,7 +24,7 @@ export default function Blog() {
     <div className="pt-20 bg-white">
       {/* Hero Section */}
       <section 
-        className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white min-h-[calc(100vh-5rem)] flex items-center"
+        className="relative py-12 lg:py-16 bg-slate-800 bg-cover bg-center text-white"
        style={{ backgroundImage: "url('/images/blog.jpg')" }}
       >
         <div className="absolute inset-0 bg-slate-900/60"></div>
@@ -43,7 +36,7 @@ export default function Blog() {
               transition={{ duration: 0.5 }}
             >
               <h1 className="text-4xl md:text-6xl font-display font-bold leading-tight mb-6">
-                Expert <span className="text-purple-400">Insights</span> & Updates
+                Expert <span className="text-brand-500">Insights</span> & Updates
               </h1>
               <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-3xl mx-auto">
                 Stay informed with the latest news, expert analysis, and product updates from our team.
@@ -64,12 +57,12 @@ export default function Blog() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-purple-100 hover:-translate-y-1 transition-all group"
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-[0_10px_30px_-16px_rgba(16,185,129,0.7)] hover:-translate-y-1 transition-all group"
               >
                 <Link to="/company" className="block">
                   <img src={post.image} alt={post.title} className="w-full h-56 object-cover" />
                   <div className="p-6">
-                    <h3 className="font-bold text-slate-800 text-xl mb-3 group-hover:text-purple-600 transition-colors h-24">{post.title}</h3>
+                    <h3 className="font-bold text-slate-800 text-xl mb-3 group-hover:text-brand-600 transition-colors h-24">{post.title}</h3>
                     <p className="text-slate-500 text-sm mb-4 h-20">{post.excerpt}</p>
                     <div className="flex items-center justify-between text-xs text-slate-400 border-t border-slate-100 pt-4">
                       <div className="flex items-center gap-2">

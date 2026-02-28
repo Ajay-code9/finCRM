@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Search, LifeBuoy, ChevronDown, ChevronUp } from "lucide-react";
+import { Search, LifeBuoy } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -38,7 +38,7 @@ export default function HelpCenter() {
     <div className="pt-20 bg-white">
       {/* Hero Section */}
       <section 
-        className="relative py-20 lg:py-32 bg-slate-800 bg-cover bg-center text-white min-h-[calc(100vh-5rem)] flex items-center"
+        className="relative py-12 lg:py-16 bg-slate-800 bg-cover bg-center text-white"
         style={{ backgroundImage: "url('/images/helpcenter.jpg')" }}
       >
         <div className="absolute inset-0 bg-slate-900/60"></div>
@@ -49,7 +49,7 @@ export default function HelpCenter() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <LifeBuoy className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+              <LifeBuoy className="w-16 h-16 text-brand-500 mx-auto mb-6" />
               <h1 className="text-4xl md:text-6xl font-display font-bold leading-tight mb-6">
                 How can we help?
               </h1>
@@ -57,7 +57,7 @@ export default function HelpCenter() {
                 <Input
                   type="text"
                   placeholder="Search for answers..."
-                  className="w-full p-4 pl-12 rounded-full bg-white/90 text-slate-900 shadow-lg text-lg focus:ring-2 focus:ring-purple-400"
+                  className="w-full p-4 pl-12 rounded-full bg-white/90 text-slate-900 shadow-lg text-lg focus:ring-2 focus:ring-brand-500/60"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -74,7 +74,7 @@ export default function HelpCenter() {
           <div className="max-w-4xl mx-auto">
             {Object.keys(filteredFaqs).map((category) => (
               <div key={category} className="mb-12">
-                <h2 className="text-2xl font-display font-bold text-slate-900 mb-6 border-l-4 border-purple-500 pl-4">{category}</h2>
+                <h2 className="text-2xl font-display font-bold text-slate-900 mb-6 border-l-4 border-brand-500 pl-4">{category}</h2>
                 <Accordion type="single" collapsible className="w-full space-y-4">
                   {filteredFaqs[category].map((faq, i) => (
                     <AccordionItem key={i} value={`item-${i}`} className="border-b-0">
@@ -84,7 +84,7 @@ export default function HelpCenter() {
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.05 }}
                       >
-                        <AccordionTrigger className="hover:no-underline text-left p-6 text-lg font-medium text-slate-900 bg-white rounded-2xl shadow-md data-[state=open]:bg-purple-600 data-[state=open]:text-white transition-all">
+                        <AccordionTrigger className="hover:no-underline text-left p-6 text-lg font-medium text-slate-900 bg-white rounded-2xl shadow-md data-[state=open]:bg-brand-600 data-[state=open]:text-white transition-all">
                           {faq.question}
                         </AccordionTrigger>
                         <AccordionContent className="text-slate-600 p-6 bg-white rounded-b-2xl leading-relaxed">

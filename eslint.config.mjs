@@ -28,9 +28,6 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      // Relax strictness so unused imports/types don't block deploys
-      '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-empty-object-type': 'off',
     },
   }
 );

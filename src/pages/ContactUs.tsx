@@ -23,11 +23,11 @@ export default function ContactUs() {
                 </h1>
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
-                    <Phone className="w-6 h-6 text-purple-600" />
+                    <Phone className="w-6 h-6 text-brand-600" />
                     <span className="text-lg text-slate-700">+357 25250675</span>
                   </div>
                   <div className="flex items-center gap-4">
-                    <MapPin className="w-6 h-6 text-purple-600" />
+                    <MapPin className="w-6 h-6 text-brand-600" />
                     <span className="text-lg text-slate-700">Labyrinthou 8, 3081, Limassol, Cyprus</span>
                   </div>
                 </div>
@@ -61,7 +61,7 @@ export default function ContactUs() {
                 <Input type="text" placeholder="Your Name" className="w-full p-3 rounded-lg border-slate-200" />
                 <Input type="email" placeholder="Your Email" className="w-full p-3 rounded-lg border-slate-200" />
                 <Textarea placeholder="Your Message" className="w-full p-3 rounded-lg border-slate-200" rows={6} />
-                <Button className="bg-purple-600 text-white hover:bg-purple-700 rounded-xl px-8 py-3 text-lg">
+                <Button className="bg-linear-to-r from-brand-600 via-brand-500 to-emerald-500 text-white rounded-xl px-8 py-3 text-lg">
                   <Send className="w-5 h-5 mr-2" />
                   Send Message
                 </Button>

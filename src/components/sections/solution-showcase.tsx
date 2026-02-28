@@ -186,7 +186,7 @@ export function SolutionShowcase() {
                 className="relative rounded-[2.25rem] bg-white border border-slate-200 shadow-(--shadow-card) overflow-hidden p-4 sm:p-6 w-full"
               >
               {/* Soft purple background wash */}
-              <div className="absolute inset-0 bg-linear-to-br from-brand-500/10 via-purple-500/8 to-slate-900/5 pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-br from-brand-500/10 via-emerald-500/8 to-slate-900/5 pointer-events-none" />
 
               {/* Main content */}
               <div className="relative z-10 grid gap-6 lg:grid-cols-[minmax(0,1.1fr),minmax(0,0.9fr)] items-center">
